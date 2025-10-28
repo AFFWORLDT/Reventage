@@ -1,13 +1,12 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://revantage-api.propfusion.io';
-const BEARER_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NjAzNSwicm9sZV9pZHMiOlsxMDBdLCJ0eXBlIjoiYWdlbnQiLCJleHAiOjE5MTQ3MDYyODB9.HomftCQdlLSR1LLuageO1uo_iJTYw59pktyFQ_cuK0I';
+// Use internal API route to avoid CORS/network issues from the browser
+const API_BASE_URL = '/api/agents';
 
 // Create axios instance with default config
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
   headers: {
-    'Authorization': `Bearer ${BEARER_TOKEN}`,
     'Content-Type': 'application/json',
   },
 });
@@ -57,18 +56,22 @@ export interface AgentsResponse {
 // Fetch all agents
 export const getAllAgents = async (): Promise<Agent[]> => {
   try {
-    const response = await apiClient.get('/agent/all');
-    return response.data;
+    const response = await apiClient.get('');
+    // If upstream returns an array directly, normalize; otherwise use response.data.data
+    const payload = response.data;
+    if (Array.isArray(payload)) return payload as Agent[];
+    if (payload?.data && Array.isArray(payload.data)) return payload.data as Agent[];
+    return [];
   } catch (error) {
     console.error('Error fetching agents:', error);
     throw new Error('Failed to fetch agents');
   }
 };
 
-// Fetch agent by ID
+// Fetch agent by ID (optional future use)
 export const getAgentById = async (id: number): Promise<Agent> => {
   try {
-    const response = await apiClient.get(`/agent/${id}`);
+    const response = await apiClient.get(`/${id}`);
     return response.data;
   } catch (error) {
     console.error('Error fetching agent:', error);
@@ -76,14 +79,15 @@ export const getAgentById = async (id: number): Promise<Agent> => {
   }
 };
 
-// Fetch featured agents (top performers)
+// Featured agents fallback to all (optional future use)
 export const getFeaturedAgents = async (): Promise<Agent[]> => {
   try {
-    const response = await apiClient.get('/agent/featured');
-    return response.data;
+    const response = await apiClient.get('/featured');
+    const payload = response.data;
+    if (Array.isArray(payload)) return payload as Agent[];
+    if (payload?.data && Array.isArray(payload.data)) return payload.data as Agent[];
+    return getAllAgents();
   } catch (error) {
-    console.error('Error fetching featured agents:', error);
-    // Fallback to all agents if featured endpoint doesn't exist
     return getAllAgents();
   }
 };

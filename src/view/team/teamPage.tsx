@@ -125,51 +125,8 @@ export default function TeamPage() {
       {/* Team Grid */}
       <section className="py-8 md:py-12 px-4 md:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-6 md:mb-8"
-          >
-            
-            
-            {/* Filter Buttons */}
-            <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-6">
-              <button
-                onClick={() => setActiveFilter('management')}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
-                  activeFilter === 'management'
-                    ? 'bg-[#c8b180] text-white shadow-lg'
-                    : 'bg-white text-gray-600 border border-gray-300 hover:border-[#c8b180] hover:text-[#c8b180] hover:shadow-md'
-                }`}
-              >
-                Management
-              </button>
-              <button
-                onClick={() => setActiveFilter('broker')}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
-                  activeFilter === 'broker'
-                    ? 'bg-[#c8b180] text-white shadow-lg'
-                    : 'bg-white text-gray-600 border border-gray-300 hover:border-[#c8b180] hover:text-[#c8b180] hover:shadow-md'
-                }`}
-              >
-                Brokers
-              </button>
-            </div>
-            
-            {/* Results Count */}
-            <div className="text-center">
-              <p className="text-sm text-gray-500">
-                Showing {agents.length} team members
-              </p>
-            </div>
-          </motion.div>
-
           {agents.length > 0 ? (
             <motion.div
-              key="all-agents"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -256,21 +213,7 @@ export default function TeamPage() {
               ))}
               </AnimatePresence>
             </motion.div>
-          ) : (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center py-12"
-            >
-              <div className="text-gray-400 mb-4">
-                <Icon icon="material-symbols:person-search-outline" className="w-16 h-16 mx-auto" />
-              </div>
-              <h3 className="text-xl font-medium text-gray-600 mb-2">No agents found</h3>
-              <p className="text-gray-500">
-                No team members found.
-              </p>
-            </motion.div>
-          )}
+          ) : null}
         </div>
       </section>
 
