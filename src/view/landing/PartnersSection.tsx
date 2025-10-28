@@ -6,15 +6,21 @@ function PartnersSection() {
   
   const partners = [
     {
+      name: "EMAAR",
+      logo: (
+        <div className="text-gray-800 font-light text-sm tracking-wider">EMAAR</div>
+      )
+    },
+    {
       name: "DAMAC",
       logo: (
         <div className="text-gray-800 font-light text-sm tracking-wider italic">DAMAC</div>
       )
     },
     {
-      name: "EMAAR",
+      name: "DUBAI HOLDING",
       logo: (
-        <div className="text-gray-800 font-light text-sm tracking-wider">EMAAR</div>
+        <div className="text-gray-800 font-light text-sm tracking-wider">DUBAI HOLDING</div>
       )
     },
     {
@@ -29,12 +35,9 @@ function PartnersSection() {
       )
     },
     {
-      name: "SOBHA REALTY",
+      name: "AZIZI",
       logo: (
-        <div className="flex flex-col items-center">
-          <span className="text-gray-800 font-light text-sm tracking-wider">SOBHA</span>
-          <span className="text-gray-600 font-light text-xs tracking-wider">REALTY</span>
-        </div>
+        <div className="text-gray-800 font-light text-sm tracking-wider">AZIZI</div>
       )
     },
     {
@@ -44,9 +47,63 @@ function PartnersSection() {
       )
     },
     {
+      name: "NSHAMA",
+      logo: (
+        <div className="text-gray-800 font-light text-sm tracking-wider">NSHAMA</div>
+      )
+    },
+    {
+      name: "SELECT GROUP",
+      logo: (
+        <div className="text-gray-800 font-light text-sm tracking-wider">SELECT GROUP</div>
+      )
+    },
+    {
+      name: "SOBHA",
+      logo: (
+        <div className="text-gray-800 font-light text-sm tracking-wider">SOBHA</div>
+      )
+    },
+    {
+      name: "ALDAR",
+      logo: (
+        <div className="text-gray-800 font-light text-sm tracking-wider">ALDAR</div>
+      )
+    },
+    {
+      name: "ACUBE DEVELOPMENTS",
+      logo: (
+        <div className="flex flex-col items-center">
+          <span className="text-gray-800 font-light text-xs tracking-wider">ACUBE</span>
+          <span className="text-gray-600 font-light text-xs tracking-wider">DEVELOPMENTS</span>
+        </div>
+      )
+    },
+    {
+      name: "IMTIAZ",
+      logo: (
+        <div className="text-gray-800 font-light text-sm tracking-wider">IMTIAZ</div>
+      )
+    },
+    {
+      name: "MAJID AL FUTTAIM",
+      logo: (
+        <div className="flex flex-col items-center">
+          <span className="text-gray-800 font-light text-xs tracking-wider">MAJID AL</span>
+          <span className="text-gray-600 font-light text-xs tracking-wider">FUTTAIM</span>
+        </div>
+      )
+    },
+    {
       name: "BINGHATTI",
       logo: (
         <div className="text-gray-800 font-light text-sm tracking-wider">BINGHATTI</div>
+      )
+    },
+    {
+      name: "OMNIYAT",
+      logo: (
+        <div className="text-gray-800 font-light text-sm tracking-wider">OMNIYAT</div>
       )
     }
   ]
@@ -68,7 +125,7 @@ function PartnersSection() {
           {/* Header */}
           <div className="flex-shrink-0">
             <h2 className="text-gray-600 text-sm font-light tracking-widest uppercase font-sans">
-              Partners with Dubai's leading developers
+              Trusted Partners
             </h2>
           </div>
 

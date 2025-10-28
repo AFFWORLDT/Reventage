@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Input } from "@/src/components/ui/input";
 import { Button } from "@/src/components/ui/button";
 import {
@@ -136,10 +136,10 @@ export default function HeroSection() {
           className="text-center mb-8 md:mb-12"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 font-serif leading-tight">
-            Find Your Dream Home
+            Find Luxury Properties <span className="text-[#c8b180]">in Dubai</span>
           </h1>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white font-serif">
-            With Revantage Real Estate
+          <h2 className="text-lg md:text-xl lg:text-2xl font-light text-white font-serif">
+            Explore our curated selection of exquisite properties and investment opportunities, tailored to exceed your expectations.
           </h2>
         </motion.div>
 

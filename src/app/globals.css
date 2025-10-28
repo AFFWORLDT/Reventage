@@ -130,7 +130,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans overflow-x-hidden;
     /* Optimize for mobile performance */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -309,5 +309,10 @@
   100% {
     background-position: -200% 0;
   }
+}
+
+/* Prevent horizontal overflow */
+html {
+  overflow-x: hidden;
 }
 

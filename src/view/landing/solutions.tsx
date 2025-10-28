@@ -4,30 +4,30 @@ function Solutions() {
   const solutions = [
     {
       icon: <User className="h-10 w-10 text-[#c8b180]" />,
-      title: "Connect with a Specialist",
+      title: "Expert Guidance",
       description:
-        "Access our dedicated team of over 400+ expert agents ready to assist you.",
+        "Our dedicated agents are experts in guiding clients through the complexities of the market, ensuring a smooth journey from initial search to final sales agreement.",
       arrow: <ArrowRight className="h-5 w-5 text-[#c8b180]" />,
     },
     {
       icon: <Building className="h-10 w-10 text-[#c8b180]" />,
-      title: "List Your Property",
+      title: "Tailored Solutions",
       description:
-        "Achieve optimal value by listing your property with our expert marketing strategies.",
+        "Every property listed with us receives the utmost attention and care. Our team tirelessly works to find the perfect home for each client.",
       arrow: <ArrowRight className="h-5 w-5 text-[#c8b180]" />,
     },
     {
       icon: <Download className="h-10 w-10 text-[#c8b180]" />,
-      title: "Download Report",
+      title: "Exceptional Service",
       description:
-        "Download the latest Comprehensive Dubai Real Estate Market Report Q1 2025",
+        "We deliver the highest standards of real estate service, going above and beyond to exceed expectations for every client.",
       arrow: <ArrowRight className="h-5 w-5 text-[#c8b180]" />,
     },
     {
       icon: <MapPin className="h-10 w-10 text-[#c8b180]" />,
-      title: "Explore Dubai Projects",
+      title: "Trusted Expertise",
       description:
-        "Browse and find your ideal property from our extensive portfolio of Dubai projects.",
+        "A leading full-service boutique brokerage with 15+ years of experience in the UAE real estate market.",
       arrow: <ArrowRight className="h-5 w-5 text-[#c8b180]" />,
     },
   ];
@@ -44,10 +44,11 @@ function Solutions() {
           {/* Luxury Header */}
           <div className="mb-8 sm:mb-12 md:mb-20 text-center">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-light font-serif text-gray-800 leading-tight px-2">
-              Dubai real estate solutions focused around
-              <br />
-              <span className="text-[#c8b180] font-normal">excellent customer service</span>
+              Welcome to your luxury <em><span className="text-[#c8b180] not-italic">dream home</span></em>
             </h2>
+            <p className="text-gray-600 text-base md:text-lg lg:text-xl mt-4 max-w-4xl mx-auto leading-relaxed">
+              We specialize in connecting properties with the right people, driven by our commitment to delivering the highest standards of real estate service.
+            </p>
             <div className="w-16 sm:w-20 md:w-24 h-1 bg-gradient-to-r from-[#c8b180] to-[#a68b5b] mx-auto mt-4 sm:mt-6 md:mt-8"></div>
           </div>
 

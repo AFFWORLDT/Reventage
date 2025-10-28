@@ -3,9 +3,11 @@ import { Check } from 'lucide-react';
 
 function WhyRevantage() {
   const benefits = [
+    "200+ Luxury Villas Sold",
+    "15+ Years of Experience",
+    "500+ Apartments Sold",
     "Most awarded real estate agency in the UAE",
     "Our agents speak more than 45 languages",
-    "Achieved 50+ billion AED sales in our career",
     "0% Zero fees to you",
     "Get listed on local & global portals"
   ];

@@ -3,30 +3,39 @@ import React from "react";
 const servicesData = [
   {
     id: 1,
-    title: "Market Insights",
+    title: "Property Management",
     description:
-      "We understand Dubai's luxury real estate market and explain areas like freehold locations, property types (townhouses, villas, penthouses), and current market trends (capital appreciation, rental yields).",
+      "Comprehensive property management services for your Dubai real estate investments. We handle every aspect from tenant screening to maintenance coordination.",
     additionalInfo:
-      "We provide insights on areas with high investment potential. We assist in making informed decisions by considering upcoming developments, infrastructure projects, and areas poised for growth.",
+      "At Revantage, we provide complete property management solutions including rent collection, maintenance oversight, regular inspections, and legal compliance. Our dedicated team ensures your property investment is protected and optimized for maximum returns.",
     imageUrl: "/images/third.webp",
   },
   {
     id: 2,
-    title: "Property Investment Consultation",
+    title: "Conveyancing",
     description:
-      "Expert guidance on investment opportunities in Dubai's dynamic real estate market. We analyze market trends, ROI potential, and help you make strategic investment decisions.",
+      "Specializing in Property Conveyancing Services, we seamlessly collaborate with essential stakeholders in Dubai's property market.",
     additionalInfo:
-      "Our team provides comprehensive analysis of emerging neighborhoods, off-plan projects, and established luxury communities to maximize your investment returns.",
+      "Our team possesses extensive transactional expertise and proficiency in both financial and cash-based transfers, ensuring your property transactions are handled with the highest level of professionalism and efficiency. We simplify the buying and selling process, ensuring a smooth and hassle-free experience.",
     imageUrl: "/images/marketprofiling.webp",
   },
   {
     id: 3,
-    title: "Luxury Property Management",
+    title: "Property Valuation",
     description:
-      "Complete property management services for your luxury real estate portfolio. From tenant screening to maintenance coordination, we handle every aspect of property management.",
+      "Expert property valuation services to determine the accurate market value of your Dubai property investments.",
     additionalInfo:
-      "Premium services including concierge support, regular property inspections, and direct communication channels for all your property needs.",
+      "Our comprehensive analysis includes market trends, comparable properties, and future growth potential. Whether you're buying, selling, or refinancing, we provide accurate valuations to help you make informed real estate decisions.",
     imageUrl: "/images/analysis.webp",
+  },
+  {
+    id: 4,
+    title: "Development Sales and Consultancy",
+    description:
+      "Expert guidance on Dubai's dynamic real estate market. We analyze market trends, ROI potential, and help you make strategic investment decisions.",
+    additionalInfo:
+      "Our team provides comprehensive analysis of emerging neighborhoods, off-plan projects, and established luxury communities. We specialize in connecting properties with the right people, delivering the highest standards of real estate advisory services.",
+    imageUrl: "/images/third.webp",
   },
 ];
 

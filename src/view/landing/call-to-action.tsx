@@ -29,7 +29,7 @@ export function CallToAction() {
             JOIN THE ELITE
           </p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-mono font-serif px-2">
-            Elevate Your Real Estate Journey
+            Elevate Your Real Estate <span className="text-[#c8b180]">Journey</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg font-extralight max-w-4xl mx-auto mb-8 sm:mb-12 leading-relaxed text-[#333] px-2">
             Ready to embark on a luxurious real estate experience tailored just

@@ -31,11 +31,14 @@ export default function TermsConditionsPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4 font-serif">2. About Revantage</h2>
               <p className="text-gray-700 mb-4">
-                Revantage is a real estate platform based in Dubai, UAE, providing property listings, real estate services, and related services. We are committed to connecting property buyers, sellers, and renters in the Dubai real estate market.
+                Revantage Real Estate Brokerage is a leading full-service boutique brokerage and advisory firm in the UAE. We specialize in connecting properties with the right people, driven by our commitment to delivering the highest standards of real estate service. We provide property listings, real estate services, and related services. We are committed to connecting property buyers, sellers, and renters in the Dubai real estate market.
+              </p>
+              <p className="text-gray-700 mb-4">
+                At Revantage, every property listed with us receives the utmost attention and care. Our dedicated agents are experts in guiding clients through the complexities of the market, ensuring a smooth journey from the initial search to the final sales agreement. We take pride in our team, who tirelessly work to find the perfect home for each client, going above and beyond to exceed expectations.
               </p>
               <div className="bg-gray-50 p-6 rounded-lg mb-4">
                 <p className="text-gray-700 mb-2"><strong>Company Information:</strong></p>
-                <p className="text-gray-700 mb-2">Revantage</p>
+                <p className="text-gray-700 mb-2">Revantage Real Estate Brokerage</p>
                 <p className="text-gray-700 mb-2">Office No.1001, Lynx Tower, Silicon Oasis</p>
                 <p className="text-gray-700 mb-2">Dubai, UAE</p>
                 <p className="text-gray-700 mb-2">Phone: <a href="tel:+97142345644" className="text-blue-600 hover:underline">+971 4 234 5644</a></p>

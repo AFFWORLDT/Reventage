@@ -269,17 +269,6 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Login Button */}
-          <Link href="/login">
-            <Button
-              variant="outline"
-              className="hidden sm:flex items-center space-x-2 bg-transparent h-8 px-3 border-gray-300 text-gray-700 hover:border-[#c8b180] hover:text-[#c8b180] transition-all duration-200"
-            >
-              <User className="h-3 w-3" />
-              <span className="text-xs font-light">Login</span>
-            </Button>
-          </Link>
-
           {/* List Your Property Button */}
           <Link href="/list-your-property">
             <Button className="h-8 px-4 text-xs font-light bg-gradient-to-r from-[#c8b180] to-[#a68b5b] hover:from-[#a68b5b] hover:to-[#8b7350] text-white border-0 transition-all duration-200">
@@ -402,15 +391,6 @@ export default function Header() {
 
           {/* Mobile Buttons */}
           <div className="space-y-3">
-            <Link href="/login" onClick={() => setIsOverlayOpen(false)}>
-              <Button
-                variant="outline"
-                className="w-full flex items-center justify-center space-x-2 border-[#c8b180] text-[#c8b180] hover:bg-[#c8b180] hover:text-white transition-all duration-200 font-medium"
-              >
-                <User className="h-4 w-4" />
-                <span>Login</span>
-              </Button>
-            </Link>
             <Link href="/list-your-property" onClick={() => setIsOverlayOpen(false)}>
               <Button className="w-full bg-gradient-to-r from-[#c8b180] to-[#a68b5b] hover:from-[#a68b5b] hover:to-[#8b7350] text-white font-medium shadow-lg hover:shadow-xl transition-all duration-200">
                 List Your Property

@@ -51,12 +51,12 @@ function HowItWorks() {
         {/* Client Trust Section */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-blue-900 mb-4 font-serif">
-            Why Our Clients Trust Us
+            What Our <span className="text-[#c8b180]">Client Says</span>
           </h2>
           <p className="text-xl text-gray-600 mb-8">
-            Discover what our customers are saying about their experiences.
+            Exceptional Experiences, Shared by Those Who've Lived Them.
           </p>
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
+          <button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
             See all reviews
           </button>
         </div>

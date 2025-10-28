@@ -54,19 +54,19 @@ function HeroSection() {
           {/* Main Heading */}
           <div className="mb-12">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight font-serif">
-              Sell or Rent Out Your Property in
+              Home Buying Made Easy with
               <br />
-              <span className="text-orange-500">Dubai</span>
+              <span className="text-[#c8b180]">Revantage</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              With the most awarded Real Estate Agency in the UAE
+              At Revantage Real Estate Brokerage, we understand that buying a home is one of life's most significant decisions. That's why we've made it our mission to simplify the process and guide you every step of the way.
             </p>
           </div>
 
           {/* CTA Button */}
           <div className="mb-12">
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200">
-              List Your Property
+            <button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200">
+              Connect with a Real Estate Expert
             </button>
           </div>
 

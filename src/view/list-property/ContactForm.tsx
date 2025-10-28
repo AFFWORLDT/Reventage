@@ -39,19 +39,17 @@ function ContactForm() {
             {/* Stats */}
             <div className="flex gap-8 mb-8">
               <div>
-                <div className="text-3xl font-bold text-primar">50K+</div>
-                <div className="text-gray-600">Home Sold</div>
+                <div className="text-3xl font-bold text-primar">200+</div>
+                <div className="text-gray-600">Luxury Villas Sold</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary">82%</div>
-                <div className="text-gray-600">of listings sold in the past 12 months</div>
+                <div className="text-3xl font-bold text-primary">500+</div>
+                <div className="text-gray-600">Apartments Sold</div>
               </div>
             </div>
 
             <p className="text-gray-600 text-lg leading-relaxed">
-              For over 16 years, Revantage has been the go-to choice for landlords and homeowners. 
-              With a dedicated team of over 200 area specialists, we specialize in maximizing your returns. 
-              Don't miss out on our expertise. Contact Revantage today!
+              Welcome to Revantage Real Estate Brokerage, a leading full-service boutique brokerage and advisory firm in the UAE. We specialize in connecting properties with the right people, driven by our commitment to delivering the highest standards of real estate service. At Revantage, every property listed with us receives the utmost attention and care. Our dedicated agents are experts in guiding clients through the complexities of the market, ensuring a smooth journey from the initial search to the final sales agreement.
             </p>
           </div>
 

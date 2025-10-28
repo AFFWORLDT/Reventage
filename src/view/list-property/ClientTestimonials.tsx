@@ -4,24 +4,38 @@ import { Star, ChevronRight, User } from 'lucide-react';
 function ClientTestimonials() {
   const testimonials = [
     {
-      name: "Ameer A.",
-      time: "1 year ago",
-      title: "Best Buyers in No Time",
-      review: "From listing to closing, Revantage provided excellent service. They marketed my property effectively and brought in serious buyers within days.",
+      name: "Mohamed Basha",
+      time: "In the last week",
+      title: "Professional and Reliable",
+      review: "I had a very good experience with Saba when renting out my flat in Dubai. She was friendly, honest, professional and took care of everything — from listing the property and arranging viewings to help in completing the agreement and Ejari. Communication was clear and always kept me updated. I'm very happy with the service and recommend to anyone who wants to rent out their property in Dubai.",
       avatar: <User className="w-8 h-8" />
     },
     {
-      name: "Karen F.",
-      time: "1 year ago",
-      title: "Seamless Sales Process",
-      review: "Revantage's expertise helped me get the best value for my home. Their marketing efforts were amazing, and the sale process was seamless.",
+      name: "Sahab Qamar",
+      time: "3 weeks ago",
+      title: "Excellent Experience",
+      review: "I had an excellent experience working with Saba from Revantage in renting out my apartment in Townsquare Dubai. She demonstrated professionalism, efficiency, and clear communication throughout the entire process. From coordinating viewings to finalizing the agreement, everything was handled seamlessly. I truly appreciate her support and would highly recommend her services to anyone seeking reliable real estate assistance.",
       avatar: <User className="w-8 h-8" />
     },
     {
-      name: "Mark H.",
-      time: "1 year ago",
-      title: "Smart and Effective Service",
-      review: "The entire process was quick and efficient. The Revantage's team took care of everything from marketing to negotiating offers. I'm delighted with their work.",
+      name: "kuncham sai navya",
+      time: "2 months ago",
+      title: "Outstanding Service for Newcomers",
+      review: "I recently moved to Dubai and was on the lookout for a rental space close to my office in Town Square. Being new to the city, the process felt overwhelming—until I connected with Saba. From the very beginning, she was incredibly supportive, professional, and genuinely committed to helping me find the right place. Saba guided me through the entire procedure seamlessly and made everything so easy and stress-free.",
+      avatar: <User className="w-8 h-8" />
+    },
+    {
+      name: "Rahul Guwlani",
+      time: "6 months ago",
+      title: "Transparent and Knowledgeable",
+      review: "Mr Rahul Guwlani of Revantage Real Estate - Dubai is very kind, knowledgeable, transparent, reliable, and wonderful at his job. Rahul's inside scoop on the city was invaluable. We had a lot of questions and Rahul ensured to answer these questions with real, local and current data and personalised approach. I could not imagine finding a better agent.",
+      avatar: <User className="w-8 h-8" />
+    },
+    {
+      name: "Eldar Yusupov",
+      time: "2 months ago",
+      title: "Professional Service Excellence",
+      review: "Revantage Real Estate Brokerage Agent Ajay assisted me with all required formalities from beginning till the end. He is very polite person and professional Real Estate Agent, he is always available to speak on the phone and answering my messages immediately without keeping me waiting, he is very transparent with all information details.",
       avatar: <User className="w-8 h-8" />
     }
   ];

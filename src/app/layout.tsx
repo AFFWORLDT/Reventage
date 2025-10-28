@@ -100,7 +100,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/images/favicon.webp" />
         <link rel="apple-touch-icon" href="/images/favicon.webp" />
       </head>
-      <body className="luxury-bg touch-optimized">
+      <body className="luxury-bg touch-optimized overflow-x-hidden">
         {children}
       </body>
     </html>

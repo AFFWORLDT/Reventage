@@ -30,11 +30,10 @@ export default function Feature() {
           FEATURED PROJECTS
         </p>
         <h1 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-mono font-thin text-[#1A202C] leading-tight mb-3 sm:mb-4 font-serif px-2">
-          Luxury Unveiled, Comfort and Sophistication
+          Upcoming and New Launch <span className="text-[#c8b180]">Projects</span>
         </h1>
         <p className="text-xs sm:text-sm md:text-[15px] text-gray-600 mx-auto max-w-2xl px-2">
-          Discover a curated selection of Dubai's most exquisite properties,
-          epitomizing luxury, elegance, and unparalleled design.
+          Explore our curated selection of exquisite properties and investment opportunities, tailored to exceed your expectations.
         </p>
       </div>
 

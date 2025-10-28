@@ -1,6 +1,6 @@
 import { Input } from "@/src/components/ui/input";
 import { Button } from "@/src/components/ui/button";
-import { MapPin, Phone, Mail, Instagram } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Facebook, Linkedin } from "lucide-react";
 
 const sitemapLinks = [
   { href: "/buy", label: "Buy" },
@@ -103,19 +103,38 @@ export default function Footer() {
                 info@revantage.com
               </a>
             </div>
-            <div className="flex items-center space-x-3">
-              <Instagram className="w-4 h-4 text-[#c8b180] flex-shrink-0" />
-              <a
-                href="https://www.instagram.com/revantage/?hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative inline-block hover:text-gray-300 transition-colors
-                           after:content-[''] after:absolute after:left-0 after:bottom-0
-                           after:h-[2px] after:w-0 after:bg-[#c8b180]
-                           after:transition-all after:duration-300 hover:after:w-full font-sans"
-              >
-                @revantage
-              </a>
+            {/* Social Media */}
+            <div className="pt-4 border-t border-white/10 mt-3">
+              <p className="text-sm text-gray-400 mb-2 font-sans">Social Media</p>
+              <div className="flex items-center space-x-4">
+                <a
+                  href="https://www.facebook.com/revantage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#c8b180] transition-colors duration-300"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="w-5 h-5 text-[#c8b180]" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/revantage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#c8b180] transition-colors duration-300"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5 text-[#c8b180]" />
+                </a>
+                <a
+                  href="https://www.instagram.com/revantage/?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#c8b180] transition-colors duration-300"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-5 h-5 text-[#c8b180]" />
+                </a>
+              </div>
             </div>
           </address>
         </div>
