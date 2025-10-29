@@ -1,41 +1,69 @@
 import React from "react";
+import ClientTestimonials from "@/src/view/list-property/ClientTestimonials";
 
 const servicesData = [
   {
     id: 1,
     title: "Property Management",
     description:
-      "Comprehensive property management services for your Dubai real estate investments. We handle every aspect from tenant screening to maintenance coordination.",
+      "Managing a property requires time, knowledge, and a hands-on approach. Our property management services are designed to simplify ownership and optimize your returns. We handle every aspect—from listing and leasing to tenant communication, repairs, and financial reporting.",
     additionalInfo:
-      "At Revantage, we provide complete property management solutions including rent collection, maintenance oversight, regular inspections, and legal compliance. Our dedicated team ensures your property investment is protected and optimized for maximum returns.",
+      "With a dedicated team and technology-driven solutions, we ensure your property is well-maintained and consistently profitable. Whether you're a first-time landlord or a seasoned investor, we provide customized strategies to meet your goals and reduce your workload.",
     imageUrl: "/images/third.webp",
+    bulletPoints: [
+      "Professional Care for Your Property - End-to-end management services to protect your property and keep your rental income steady.",
+      "Your Property, Our Priority - We handle tenants, maintenance, and everything in between so you don't have to.",
+      "Stress-Free Property Ownership - From rent collection to 24/7 maintenance—let us manage your property with care and expertise.",
+      "Maximize Returns, Minimize Hassle - Trusted property management that increases value while saving you time.",
+      "Expert Management, Exceptional Results - We take care of your property like it's our own—with transparency, efficiency, and professionalism.",
+    ],
   },
   {
     id: 2,
     title: "Conveyancing",
     description:
-      "Specializing in Property Conveyancing Services, we seamlessly collaborate with essential stakeholders in Dubai's property market.",
+      "Buying or selling property is one of the biggest financial decisions you'll make—and our conveyancing team is here to make sure it's done right. We manage all the legal, financial, and administrative aspects of transferring property ownership.",
     additionalInfo:
-      "Our team possesses extensive transactional expertise and proficiency in both financial and cash-based transfers, ensuring your property transactions are handled with the highest level of professionalism and efficiency. We simplify the buying and selling process, ensuring a smooth and hassle-free experience.",
+      "From drafting and reviewing contracts to conducting title searches and liaising with all parties involved, we ensure your transaction is smooth, transparent, and fully compliant with local regulations. Whether you're a first-time buyer or an experienced investor, we provide clear communication, expert guidance, and timely execution every step of the way.",
     imageUrl: "/images/marketprofiling.webp",
+    bulletPoints: [
+      "Smooth & Secure Property Transfers - We handle all legal aspects of buying or selling property, ensuring a safe and seamless transaction.",
+      "Expert Conveyancing You Can Trust - From contract to completion, our team ensures your property transfer is legally sound and hassle-free.",
+      "Stress-Free Property Transactions - Professional conveyancing for buyers, sellers, and investors—transparent, timely, and efficient.",
+      "Your Legal Partner in Property Deals - We manage the paperwork, legal checks, and compliance—so you can focus on your move or investment.",
+    ],
   },
   {
     id: 3,
     title: "Property Valuation",
     description:
-      "Expert property valuation services to determine the accurate market value of your Dubai property investments.",
+      "Whether you're planning to sell, buy, rent, or invest, understanding your property's accurate market value is essential. Our certified property valuation services combine industry expertise, local market knowledge, and real-time data to deliver precise, transparent reports.",
     additionalInfo:
-      "Our comprehensive analysis includes market trends, comparable properties, and future growth potential. Whether you're buying, selling, or refinancing, we provide accurate valuations to help you make informed real estate decisions.",
+      "We assess all critical factors—from location and condition to market trends and legal status—to ensure you receive a fair and informed valuation. Ideal for homeowners, investors, developers, and financial institutions.",
     imageUrl: "/images/analysis.webp",
+    bulletPoints: [
+      "Know Your Property's True Worth - Accurate, expert valuations for sales, rentals, investments, or legal purposes.",
+      "Certified Property Valuation Services - Get a market-driven valuation backed by data, experience, and local insights.",
+      "Reliable Valuations You Can Trust - We provide detailed property assessments to guide your decisions with confidence.",
+      "Maximize Value, Minimize Guesswork - Whether buying, selling, or leasing—our valuations give you a clear picture of your property's worth.",
+      "Expert Valuations for Every Property Type - Residential, commercial, or off-plan—we deliver precise reports aligned with market trends.",
+    ],
   },
   {
     id: 4,
     title: "Development Sales and Consultancy",
     description:
-      "Expert guidance on Dubai's dynamic real estate market. We analyze market trends, ROI potential, and help you make strategic investment decisions.",
+      "Our Development, Sales, and Consultancy division is built to support investors, developers, and property owners through every stage of the real estate journey.",
     additionalInfo:
-      "Our team provides comprehensive analysis of emerging neighborhoods, off-plan projects, and established luxury communities. We specialize in connecting properties with the right people, delivering the highest standards of real estate advisory services.",
+      "From initial planning and feasibility studies to project marketing and final sales, we bring deep market knowledge, regulatory expertise, and creative strategy to the table. Whether you're launching a new residential project, repositioning an asset, or entering a new market, our experienced team ensures smart development planning, effective go-to-market execution, and strong returns on investment.",
     imageUrl: "/images/third.webp",
+    bulletPoints: [
+      "From Vision to Reality - We guide property development from planning to sales, backed by expert consultancy at every stage.",
+      "Your Partner in Property Growth - Strategic development, sales execution, and market consultancy under one roof.",
+      "Smart Development, Seamless Sales - Unlock the full potential of your property with our end-to-end development and advisory services.",
+      "Build, Sell, Succeed - Comprehensive support for property developers—from concept to closing.",
+      "Real Estate Expertise You Can Rely On - We offer professional guidance in property development, sales strategy, and market positioning.",
+    ],
   },
 ];
 
@@ -88,9 +116,31 @@ export default function Services() {
                       {service.description}
                     </p>
 
-                    <p className="text-sm text-neutral-500 mb-8 ">
+                    <p className="text-sm text-neutral-500 mb-6 ">
                       {service.additionalInfo}
                     </p>
+
+                    {/* Bullet Points */}
+                    {service.bulletPoints && service.bulletPoints.length > 0 && (
+                      <ul className="space-y-3 mb-8">
+                        {service.bulletPoints.map((point, idx) => {
+                          const [title, description] = point.split(" - ");
+                          return (
+                            <li key={idx} className="flex items-start space-x-3">
+                              <span className="text-[#c8b180] mt-1">▪</span>
+                              <div>
+                                <strong className="text-gray-800 font-semibold block mb-1">
+                                  {title}
+                                </strong>
+                                <span className="text-neutral-500 text-sm">
+                                  {description}
+                                </span>
+                              </div>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    )}
                   </div>
                 </div>
               </div>
@@ -98,6 +148,8 @@ export default function Services() {
           })}
         </div>
       </div>
+      {/* Testimonials Section */}
+      <ClientTestimonials />
     </div>
   );
 }

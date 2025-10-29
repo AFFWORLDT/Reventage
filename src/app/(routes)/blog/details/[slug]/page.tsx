@@ -1,12 +1,13 @@
 "use client"
 import DetailsBlog from '@/src/view/blog/blogDetails'
 import { useParams } from 'next/navigation'
-import React, { use } from 'react'
+import React from 'react'
 
 function BlogDetails() {
-    const {slug}=useParams()
+    const params = useParams()
+    const slug = params?.slug as string || ""
   return (
-    <div><DetailsBlog/></div>
+    <div><DetailsBlog slug={slug}/></div>
   )
 }
 

@@ -11,55 +11,119 @@ import { Calendar, Clock, Share2, BookOpen, ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-// Mock data - in a real app, this would come from your CMS or database
-const blogPost = {
-  title: "Why Buying Property in Dubai is Better than Renting",
-  subtitle:
-    "Discover the financial, lifestyle, and investment advantages of owning property in Dubai.",
-  content: `
-    <h2>Long-Term Financial Benefits</h2>
-    <p>Renting might provide short-term flexibility, but it’s essentially paying for someone else’s property investment. When you buy a property, each payment builds equity—an asset that grows in value over time. With Dubai’s real estate market offering high capital appreciation, buying a home can significantly enhance your net worth.</p>
-    <p>Moreover, rental prices in Dubai can be volatile, often rising sharply in popular areas. Owning property allows you to avoid these fluctuations and provides you with stable and predictable housing costs.</p>
+// Blog data - each post with its content and image
+const blogPosts = {
+  "smart-homes-in-dubai": {
+    title: "Smart Homes in Dubai: How Technology is Transforming Apartments & Villas",
+    subtitle: "Discover how smart technology is revolutionizing modern living in Dubai, combining convenience, security, and energy efficiency in apartments and villas...",
+    featuredImage: "/images/smart-homes-in-dubai-how-technology-is-transforming-apartments-villas.webp",
+    date: "October 24, 2025",
+    content: `
+    <h2>Smart Home Technology in Dubai</h2>
+    <p>Dubai has rapidly emerged as a global leader in smart city initiatives, and this technological advancement is transforming the residential real estate sector. Smart homes in Dubai are setting new benchmarks for modern living, combining cutting-edge technology with luxury and sustainability.</p>
+    <p>From voice-activated lighting systems to automated climate control, smart homes in Dubai offer residents unparalleled convenience and energy efficiency. These technological integrations are particularly prominent in luxury apartments and villas across prime locations.</p>
 
-    <h2>Tax-Free Property Ownership</h2>
-    <p>Dubai is known for its investor-friendly environment, including no property taxes. Once you purchase a property, you won’t need to worry about annual taxes cutting into your investment’s value. This tax-free advantage makes property ownership in Dubai even more appealing compared to other global cities.</p>
+    <h2>Key Smart Home Features</h2>
+    <p>Modern smart homes in Dubai typically feature integrated smart systems including security cameras with mobile monitoring, automated lighting that adjusts based on occupancy and natural light, and intelligent climate control systems that optimize energy consumption.</p>
+    <p>Smart appliances, automated curtain systems, and integrated home entertainment are becoming standard in new developments. These features not only enhance the living experience but also contribute to substantial energy savings.</p>
 
-    <h2>Flexible Payment Plans</h2>
-    <p>Developers in Dubai often offer attractive and flexible payment plans for off-plan properties. These plans allow buyers to spread payments over several years, making homeownership accessible to a broader range of individuals. In many cases, the monthly installments for a property purchase can be comparable to, or even less than, rental payments.</p>
+    <h2>Investment Value</h2>
+    <p>Properties equipped with smart technology tend to have higher market values and rental yields. The demand for smart homes continues to grow as residents seek more connected, efficient, and secure living spaces.</p>
+    <p><strong>Ready to explore smart homes in Dubai?</strong> Contact Revantage to discover luxury properties equipped with the latest smart technology.</p>
+  `,
+  },
+  "why-millennials-gen-z-investing-dubai": {
+    title: "Why Millennials and Gen Z Are Investing in Dubai Real Estate",
+    subtitle: "Explore why the younger generation is flocking to Dubai's real estate market for smart investments and lifestyle opportunities...",
+    featuredImage: "/images/why-millennials-and-gen-z-are-investing-in-dubai-real-estate.webp",
+    date: "September 10, 2025",
+    content: `
+    <h2>A New Generation of Real Estate Investors</h2>
+    <p>Millennials and Gen Z are increasingly recognizing Dubai as a premier destination for real estate investment. This generation values lifestyle, sustainability, and financial opportunity, all of which Dubai's property market offers in abundance.</p>
+    <p>The younger generation approaches real estate investment differently - they seek properties that align with their values, offer strong returns, and provide access to a vibrant lifestyle.</p>
 
-    <h2>Residency Benefits</h2>
-    <p>Owning property in Dubai can come with residency visa benefits, depending on the value of your investment. This provides not just a place to live but also the security of being a resident in one of the world’s most vibrant cities. These visas often allow property owners and their families to enjoy the perks of living in Dubai, such as access to excellent healthcare, education, and business opportunities.</p>
-
-    <h2>Freedom to Personalize</h2>
-    <p>When you own your home, you have complete control over its design and functionality. You can renovate, redecorate, and modify your property as you wish without the limitations imposed by a landlord. This freedom allows you to create a space that truly feels like home.</p>
+    <h2>Affordability and Payment Plans</h2>
+    <p>Dubai developers are offering flexible payment plans that make property ownership accessible to younger buyers. These innovative financing options, combined with competitive prices, make it easier for millennials and Gen Z to enter the property market.</p>
+    <p>Many developments offer installment plans where payments are spread over several years, requiring minimal upfront investment. This accessibility has opened the market to a broader demographic of young professionals and entrepreneurs.</p>
 
     <h2>High Rental Yields</h2>
-    <p>If you’re not planning to live in the property, Dubai’s high rental yields make property ownership a lucrative investment. Popular areas such as Downtown Dubai, Dubai Marina, and Palm Jumeirah offer some of the highest rental returns globally, ensuring your property works for you even when you’re not living in it.</p>
+    <p>Dubai's rental yields are among the highest globally, attracting young investors who see property as both a home and an investment opportunity. Areas like Dubai Marina, Business Bay, and Palm Jumeirah offer particularly attractive returns.</p>
+    <p>Young investors appreciate the dual benefits of potential capital appreciation and steady rental income, making Dubai real estate an appealing portfolio addition.</p>
 
-    <h2>A Hedge Against Inflation</h2>
-    <p>Owning property protects you from rising rental prices, which can significantly impact your cost of living over time. Fixed mortgage rates or paid-off properties ensure stability in your housing expenses, acting as a hedge against inflation.</p>
-
-    <h2>A Thriving Real Estate Market</h2>
-    <p>Dubai’s real estate market is continuously evolving, with world-class infrastructure projects, upcoming mega-developments, and a strong commitment to sustainability and innovation. Buying property in this market positions you to benefit from the city’s ongoing growth and global appeal.</p>
-
-    <h2>Conclusion</h2>
-    <p>While renting offers short-term convenience, buying property in Dubai is a decision that offers lasting value, financial security, and numerous lifestyle advantages. From tax-free ownership to residency benefits and high rental yields, the incentives to invest in Dubai real estate are compelling.</p>
-
-            <p><strong>Make the smart move today.</strong> Contact our team at Revantage to explore exclusive property listings and discover your path to homeownership in Dubai. Let us help you turn your investment dreams into reality!</p>
+    <h2>Lifestyle and Work-Life Balance</h2>
+    <p>Dubai's modern infrastructure, world-class amenities, and tax-free environment make it attractive to young professionals and digital nomads. The city's vibrant lifestyle, excellent connectivity, and diverse cultural scene resonate with millennial and Gen Z values.</p>
+    <p><strong>Ready to start your investment journey?</strong> Contact Revantage to discover properties that match your lifestyle and financial goals.</p>
   `,
-  author: {
-          name: "Revantage",
-    bio: "Leading property experts helping investors and homeowners navigate Dubai’s thriving real estate market.",
-    avatar: "/images/logo-gold.svg",
   },
-  publishedAt: "December 24, 2024",
-  readTime: "6 min read",
-  category: "Real Estate",
-  tags: ["Dubai", "Investment", "Real Estate", "Property"],
-  featuredImage: "/images/blog1.webp",
+  "properties-for-rent-dubai": {
+    title: "Properties for Rent in Dubai – Your Guide to the Best Deals",
+    subtitle: "Navigate Dubai's rental market with expert insights on finding the best deals for apartments and villas in prime locations...",
+    featuredImage: "/images/properties-for-rent-in-dubai-your-guide-to-the-best-deals.webp",
+    date: "June 8, 2025",
+    content: `
+    <h2>Finding the Perfect Rental Property</h2>
+    <p>Dubai's rental market offers an extensive range of options, from luxurious waterfront apartments to spacious family villas. Understanding the market dynamics and knowing where to look can help you find the best deals while securing a property that meets your needs and lifestyle.</p>
+    <p>Key areas like Dubai Marina, Downtown Dubai, JBR, and Palm Jumeirah offer premium living experiences with a variety of rental options to suit different budgets and preferences.</p>
+
+    <h2>What to Consider When Renting</h2>
+    <p>When searching for rental properties in Dubai, consider factors such as proximity to your workplace, access to public transport, nearby amenities, school zones for families, and the community's overall vibe and lifestyle offerings.</p>
+    <p>Additionally, review the building's facilities, maintenance services, and the terms of the lease agreement including utility costs, parking arrangements, and renewal conditions.</p>
+
+    <h2>Working with a Professional Agent</h2>
+    <p>Partnering with a knowledgeable real estate agent like Revantage can streamline your property search. We have extensive knowledge of Dubai's rental market and can help you find properties that match your budget, location preferences, and lifestyle needs.</p>
+    <p><strong>Looking for your ideal rental property?</strong> Contact Revantage today to explore the best rental deals in Dubai's most sought-after locations.</p>
+  `,
+  },
+  "exploring-dubai-luxury-real-estate": {
+    title: "Exploring Dubai's Luxury Real Estate Market: A Guide to Buying Villas and Apartments",
+    subtitle: "A comprehensive guide to Dubai's luxury property market, covering key considerations for purchasing high-end villas and apartments...",
+    featuredImage: "/images/exploring-dubais-luxury-real-estate-market-a-guide-to-buying-villas-and-apartments.webp",
+    date: "June 5, 2025",
+    content: `
+    <h2>Dubai's Luxury Real Estate Landscape</h2>
+    <p>Dubai's luxury real estate market continues to attract discerning investors and homeowners from around the world. With exceptional developments across prestigious locations, the city offers an unparalleled selection of luxury villas and apartments designed to the highest international standards.</p>
+    <p>From beachfront apartments on Palm Jumeirah to sprawling villas in Emirates Hills, Dubai's luxury property market caters to the most sophisticated tastes and lifestyle requirements.</p>
+
+    <h2>Prime Luxury Locations</h2>
+    <p>Dubai's most prestigious residential areas include Palm Jumeirah, Emirates Hills, Jumeirah Golf Estates, Dubai Hills Estate, and Downtown Dubai. These communities offer world-class amenities, stunning architecture, and exclusivity.</p>
+    <p>Each location has its unique character - from the beach lifestyle of Palm Jumeirah to the golf course living in Emirates Hills - ensuring there's a luxury property to match every preference.</p>
+
+    <h2>Investment Potential</h2>
+    <p>Luxury properties in Dubai offer strong investment potential with high rental yields and solid capital appreciation prospects. The tax-free environment, coupled with world-class infrastructure and connectivity, makes Dubai luxury real estate a compelling investment opportunity.</p>
+    <p><strong>Ready to explore luxury properties in Dubai?</strong> Contact Revantage to view exclusive listings of the finest villas and apartments in Dubai's most prestigious neighborhoods.</p>
+  `,
+  },
+  "ultimate-guide-buying-luxury-home-dubai": {
+    title: "The Ultimate Guide to Buying a Luxury Home in Dubai: Villas, Apartments, and Townhouses",
+    subtitle: "Everything you need to know about purchasing luxury properties in Dubai, from villas to townhouses, with expert tips and insights...",
+    featuredImage: "/images/the-ultimate-guide-to-buying-a-luxury-home-in-dubai-villas-apartments-and-townhouses.webp",
+    date: "April 25, 2025",
+    content: `
+    <h2>Your Complete Guide to Luxury Home Ownership</h2>
+    <p>Buying a luxury home in Dubai is a significant investment that requires careful planning, market knowledge, and the right guidance. This comprehensive guide covers everything you need to know about purchasing your dream property in one of the world's most dynamic real estate markets.</p>
+    <p>Whether you're considering a waterfront villa, a high-rise apartment with panoramic views, or a luxury townhouse in a gated community, understanding the Dubai market is essential for making the right investment decision.</p>
+
+    <h2>Understanding Property Types</h2>
+    <p>Luxury villas in Dubai offer the ultimate in privacy and space, typically featuring private pools, expansive gardens, and premium finishes. Areas like Emirates Hills and Palm Jumeirah are known for their exclusive villa communities.</p>
+    <p>Luxury apartments provide a different lifestyle with stunning city or sea views, world-class facilities, and concierge services. Downtown Dubai and Dubai Marina are home to some of the most prestigious residential towers.</p>
+    <p>Luxury townhouses offer the perfect balance between apartments and villas, providing more space than apartments while being more affordable than standalone villas. Dubai Hills Estate and Arabian Ranches are popular for luxury townhouse developments.</p>
+
+    <h2>Key Considerations for Buyers</h2>
+    <p>When purchasing a luxury home in Dubai, consider factors such as location, developer reputation, amenities, payment plans, maintenance fees, and long-term value appreciation potential.</p>
+    <p>Working with an experienced real estate agent is crucial for navigating the luxury market, understanding developer offerings, negotiating favorable terms, and ensuring a smooth transaction process.</p>
+
+    <h2>The Buying Process</h2>
+    <p>The process typically involves selecting your property, making an initial deposit, securing financing if needed, conducting due diligence, signing the Sales and Purchase Agreement (SPA), and eventually taking possession of your new home.</p>
+    <p><strong>Ready to find your luxury home?</strong> Contact Revantage to explore our curated selection of Dubai's finest luxury properties.</p>
+  `,
+  },
 };
 
-export default function DetailsBlog() {
+export default function DetailsBlog({ slug }: { slug: string }) {
+  // Get the blog post based on slug, or use default
+  const currentSlug = slug || "smart-homes-in-dubai";
+  const blogPost = blogPosts[currentSlug as keyof typeof blogPosts] || blogPosts["smart-homes-in-dubai"];
+
   return (
     <div className="min-h-screen bg-background">
       <section className="pt-32 pb-12 px-4 bg-[#141442]">
@@ -71,16 +135,16 @@ export default function DetailsBlog() {
       </section>
       <div className="max-w-5xl mx-auto px-6 mt-16">
         <h1 className="text-center text-4xl font-serif font-bold">
-          Why Buying Property in Dubai is Better than Renting
+          {blogPost.title}
         </h1>
-        <p className="text-center text-xl font-mono mt-11">December 24, 2024</p>
+        <p className="text-center text-xl font-mono mt-11">{blogPost.date}</p>
       </div>
       {/* Featured Image */}
       <div className="max-w-5xl mx-auto px-6 mt-8 mb-12">
         <div className="relative rounded-none overflow-hidden ">
           <Image
-            src={"/images/blog1.webp"}
-            alt="Featured image"
+            src={blogPost.featuredImage}
+            alt={blogPost.title}
             width={0}
             height={0}
             className="w-full h-64 md:h-96 object-cover"

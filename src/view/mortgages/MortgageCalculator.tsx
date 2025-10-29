@@ -5,13 +5,14 @@ import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
 
 export default function MortgageCalculator() {
-  const [totalPrice, setTotalPrice] = useState(816771);
-  const [downPayment, setDownPayment] = useState(25);
-  const [interestRate, setInterestRate] = useState(3.75);
+  const [totalPrice, setTotalPrice] = useState(1000000);
+  const [downPayment, setDownPayment] = useState(20);
+  const [interestRate, setInterestRate] = useState(4.99);
   const [loanPeriod, setLoanPeriod] = useState(25);
 
   const calculateMonthlyPayment = () => {
-    const loanAmount = totalPrice * (1 - downPayment / 100);
+    const downPaymentAmount = totalPrice * (downPayment / 100);
+    const loanAmount = totalPrice - downPaymentAmount;
     const monthlyRate = interestRate / 100 / 12;
     const numberOfPayments = loanPeriod * 12;
     
@@ -26,40 +27,11 @@ export default function MortgageCalculator() {
   };
 
   const monthlyPayment = calculateMonthlyPayment();
+  const downPaymentAmount = totalPrice * (downPayment / 100);
 
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        {/* Bank Partners */}
-        <div className="text-center mb-16">
-          <h2 className="text-2xl font-bold text-gray-800 mb-8 uppercase tracking-wide font-serif">
-            CONNECTING YOU WITH OVER 20 MAJOR BANKS IN DUBAI AND THE UAE
-          </h2>
-          
-          {/* Bank Logos */}
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            <div className="bg-white px-6 py-4 rounded-lg shadow-sm">
-              <div className="text-red-600 font-bold text-lg">ADCB</div>
-              <div className="text-xs text-gray-500">بنك أبوظبي التجاري</div>
-            </div>
-            <div className="bg-white px-6 py-4 rounded-lg shadow-sm">
-              <div className="text-blue-600 font-bold text-lg">Emirates NBD</div>
-            </div>
-            <div className="bg-white px-6 py-4 rounded-lg shadow-sm">
-              <div className="text-blue-600 font-bold text-lg">ADIB</div>
-              <div className="text-xs text-gray-500">مصرف أبوظبي الإسلامي</div>
-            </div>
-            <div className="bg-white px-6 py-4 rounded-lg shadow-sm">
-              <div className="text-blue-600 font-bold text-lg">Mashreq</div>
-              <div className="text-xs text-gray-500">المشرق</div>
-            </div>
-            <div className="bg-white px-6 py-4 rounded-lg shadow-sm">
-              <div className="text-red-600 font-bold text-lg">FAB</div>
-              <div className="text-xs text-gray-500">بنك أبوظبي الأول</div>
-            </div>
-          </div>
-        </div>
-
         {/* Mortgage Calculator */}
         <div className="">
           <div className="bg-blue-50 rounded-2xl p-8 shadow-lg">
@@ -67,13 +39,13 @@ export default function MortgageCalculator() {
               Mortgage Calculator
             </h3>
             <p className="text-gray-600 mb-8">
-              Start the effortless journey of listing your property with us, step by step.
+              Calculate your monthly mortgage payments with our easy-to-use calculator.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Total Price (USD)
+                  Property Price (AED)
                 </label>
                 <Input
                   type="number"
@@ -84,15 +56,25 @@ export default function MortgageCalculator() {
               </div>
               
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Down Payment (%)
-                </label>
-                <Input
-                  type="number"
+                <div className="flex justify-between items-center mb-2">
+                  <label className="block text-sm font-medium text-gray-700">
+                    Down Payment
+                  </label>
+                  <span className="text-sm text-gray-600">Percent: {downPayment}%</span>
+                </div>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
                   value={downPayment}
                   onChange={(e) => setDownPayment(Number(e.target.value))}
-                  className="w-full"
+                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
                 />
+                <div className="text-right mt-1">
+                  <span className="text-sm font-medium text-blue-600">
+                    AED {downPaymentAmount.toLocaleString()}
+                  </span>
+                </div>
               </div>
               
               <div>
@@ -110,7 +92,7 @@ export default function MortgageCalculator() {
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Loan Period Yearly
+                  Loan Duration (Years)
                 </label>
                 <Input
                   type="number"
@@ -126,7 +108,7 @@ export default function MortgageCalculator() {
               <div className="text-center">
                 <div className="text-sm text-gray-600 mb-2">Monthly Payments</div>
                 <div className="text-3xl font-bold text-blue-900">
-                  USD {monthlyPayment.toFixed(2)} /month
+                  AED {monthlyPayment.toFixed(2)} /month
                 </div>
               </div>
             </div>

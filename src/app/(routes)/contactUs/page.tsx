@@ -17,16 +17,11 @@ function ContactUs() {
       <div className="flex flex-col lg:flex-row py-20 items-center justify-center container mx-auto max-w-7xl">
         <div className="w-full lg:w-1/2 p-6 md:p-8 lg:pr-16 space-y-8 text-center lg:text-left">
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20">
-            <p className="text-[#c8b180] text-sm font-medium uppercase tracking-widest font-sans mb-4">
-              CONNECT WITH LUXURY
-            </p>
             <h2 className="text-4xl md:text-5xl text-gray-800 leading-tight font-sans mb-6 font-serif">
-              Get in Touch with <span className="text-[#c8b180] font-normal">Revantage</span>
+              Get in Touch with <span className="text-[#c8b180] font-normal">Revantage Real Estate</span>
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed font-sans">
-              Have a question or ready to embark on your real estate journey? Our team is here to assist you every step of
-              the way. Reach out to us via phone, email, or simply fill out the contact form below. We look forward to
-              hearing from you!
+              We are here to assist you with all your real estate needs. Whether you have questions, need assistance, or want to explore our services, feel free to reach out to us.
             </p>
           </div>
           <div className="bg-gradient-to-br from-[#c8b180]/10 to-[#a68b5b]/10 rounded-2xl p-6 border border-[#c8b180]/20">
@@ -67,6 +62,13 @@ function ContactUs() {
                   >
                     +971 4 234 5644
                   </a>
+                  <br />
+                  <a
+                    href="tel:+971508096161"
+                    className="text-[#c8b180] hover:text-[#a68b5b] transition-colors font-sans"
+                  >
+                    +971508096161
+                  </a>
                 </div>
               </div>
               
@@ -106,17 +108,6 @@ function ContactUs() {
                 </div>
               </div>
               
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-[#c8b180] rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-gray-800 font-medium font-sans">Business Hours</p>
-                  <p className="text-gray-600 font-sans">Mon – Fri: 9AM to 7PM</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

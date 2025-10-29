@@ -75,30 +75,38 @@ export default function Header() {
       name: "Property Management"
     },
     {
-      icon: <Home className="h-4 w-4 text-gray-500" />,
-      name: "List Your Property"
-    },
-    {
-      icon: <DollarSign className="h-4 w-4 text-gray-500" />,
-      name: "Mortgages"
-    },
-    {
       icon: <Scale className="h-4 w-4 text-gray-500" />,
       name: "Conveyancing"
     },
     {
-      icon: <Bed className="h-4 w-4 text-gray-500" />,
-      name: "Short Term Rentals"
+      icon: <TrendingUp className="h-4 w-4 text-gray-500" />,
+      name: "Property Valuation"
     },
     {
-      icon: <Wrench className="h-4 w-4 text-gray-500" />,
-      name: "Property Snagging"
+      icon: <Building2 className="h-4 w-4 text-gray-500" />,
+      name: "Development Sales and Consultancy"
     },
+    // OLD SERVICES - Commented out
+    // {
+    //   icon: <Home className="h-4 w-4 text-gray-500" />,
+    //   name: "List Your Property"
+    // },
     {
-      icon: <Users className="h-4 w-4 text-gray-500" />,
-      name: "Partner Program"
+      icon: <DollarSign className="h-4 w-4 text-gray-500" />,
+      name: "Mortgages"
     },
-    
+    // {
+    //   icon: <Bed className="h-4 w-4 text-gray-500" />,
+    //   name: "Short Term Rentals"
+    // },
+    // {
+    //   icon: <Wrench className="h-4 w-4 text-gray-500" />,
+    //   name: "Property Snagging"
+    // },
+    // {
+    //   icon: <Users className="h-4 w-4 text-gray-500" />,
+    //   name: "Partner Program"
+    // },
   ];
 
   const headerLink = [
@@ -189,8 +197,10 @@ export default function Header() {
                                 href={
                                   service.name === "List Your Property" ? "/list-your-property" :
                                   service.name === "Property Management" ? "/property-management" :
-                                  service.name === "Mortgages" ? "/mortgages" :
                                   service.name === "Conveyancing" ? "/conveyancing" :
+                                  service.name === "Property Valuation" ? "/property-valuation" :
+                                  service.name === "Development Sales and Consultancy" ? "/development-sales-consultancy" :
+                                  service.name === "Mortgages" ? "/mortgages" :
                                   service.name === "Short Term Rentals" ? "/short-term-rental" :
                                   "/service"
                                 }
@@ -214,8 +224,10 @@ export default function Header() {
                                 href={
                                   service.name === "List Your Property" ? "/list-your-property" :
                                   service.name === "Property Management" ? "/property-management" :
-                                  service.name === "Mortgages" ? "/mortgages" :
                                   service.name === "Conveyancing" ? "/conveyancing" :
+                                  service.name === "Property Valuation" ? "/property-valuation" :
+                                  service.name === "Development Sales and Consultancy" ? "/development-sales-consultancy" :
+                                  service.name === "Mortgages" ? "/mortgages" :
                                   service.name === "Short-Term Rental" ? "/short-term-rental" :
                                   "/service"
                                 }
@@ -347,6 +359,9 @@ export default function Header() {
                           href={
                             service.name === "List Your Property" ? "/list-your-property" :
                             service.name === "Property Management" ? "/property-management" :
+                            service.name === "Conveyancing" ? "/conveyancing" :
+                            service.name === "Property Valuation" ? "/property-valuation" :
+                            service.name === "Development Sales and Consultancy" ? "/development-sales-consultancy" :
                             "/service"
                           }
                           onClick={() => setIsOverlayOpen(false)}

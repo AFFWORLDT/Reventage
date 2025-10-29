@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Card, CardContent } from "@/src/components/ui/card";
 import { Button } from "@/src/components/ui/button";
 import { Heart, Bed, Bath, SquareGanttChart, ChevronRight } from "lucide-react";
-import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
 interface PropertyCardProps {
@@ -115,10 +114,7 @@ export function BlogCard({
   href,
 }: BlogCardProps) {
   return (
-    <motion.div
-      transition={{ duration: 0.3 }}
-      className="bg-white rounded-none shadow-sm overflow-hidden group min-h-[550px] max-h-[550px]"
-    >
+    <div className="bg-white rounded-none shadow-sm overflow-hidden group min-h-[550px] max-h-[550px]">
       <div className="relative h-80 w-full overflow-hidden">
         <div
           className="h-full w-full bg-center bg-cover transition-transform duration-300 group-hover:scale-105"
@@ -137,15 +133,14 @@ export function BlogCard({
         <p className="text-sm text-gray-600 mb-4 line-clamp-3 font-extralight leading-relaxed">
           {description}
         </p>
-        <motion.a
+        <a
           href={href}
-          whileHover={{ x: 5 }}
-          className="inline-flex items-center font-extralight tracking-wider hover:underline text-[#c8b180] uppercase"
+          className="inline-flex items-center font-extralight tracking-wider hover:underline text-[#c8b180] uppercase transition-transform hover:translate-x-1"
         >
           READ MORE
           <ChevronRight size={15} />
-        </motion.a>
+        </a>
       </div>
-    </motion.div>
+    </div>
   );
 }
