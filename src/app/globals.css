@@ -137,13 +137,23 @@
     text-rendering: optimizeLegibility;
   }
   h1, h2 {
-    @apply font-serif;
+    @apply font-serif font-normal;
   }
   h3, h4, h5, h6 {
     @apply font-sans;
   }
   p, span, div, a, button, input, select, textarea {
     @apply font-sans;
+  }
+  
+  /* Ensure consistent serif usage for main headings */
+  .font-serif {
+    font-family: var(--font-playfair), "Playfair Display", "Times New Roman", serif;
+  }
+  
+  /* Ensure consistent sans-serif usage */
+  .font-sans {
+    font-family: var(--font-poppins), "Poppins", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
   }
   
   /* Mobile optimizations */

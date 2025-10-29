@@ -108,7 +108,7 @@ export default function Footer() {
               <p className="text-sm text-gray-400 mb-2 font-sans">Social Media</p>
               <div className="flex items-center space-x-4">
                 <a
-                  href="https://www.facebook.com/revantage"
+                  href="https://www.facebook.com/revantagedxb"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#c8b180] transition-colors duration-300"
@@ -117,7 +117,7 @@ export default function Footer() {
                   <Facebook className="w-5 h-5 text-[#c8b180]" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/company/revantage"
+                  href="https://www.linkedin.com/company/revantagedxb/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#c8b180] transition-colors duration-300"
@@ -126,7 +126,7 @@ export default function Footer() {
                   <Linkedin className="w-5 h-5 text-[#c8b180]" />
                 </a>
                 <a
-                  href="https://www.instagram.com/revantage/?hl=en"
+                  href="https://www.instagram.com/revantagedxb/?igsh=Mmo2eXdsN3o1bzgx"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#c8b180] transition-colors duration-300"

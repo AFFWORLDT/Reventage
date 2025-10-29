@@ -35,18 +35,19 @@ export default function HeroSection() {
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight text-left font-serif">
-            Property Management with a Personal Touch
+            Property Management
           </h1>
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl leading-relaxed text-left">
-            Let our years of experience work for you! If you'd like to see how much you can make on your property, get started with a FREE rental analysis today!
+            Managing a property requires time, knowledge, and a hands-on approach. Our services simplify
+            ownership and optimize your returns with end-to-end management and transparent reporting.
           </p>
 
           {/* CTA Button */}
           <div className="text-left">
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
-              Free rental analysis
+            <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+              Connect with an expert
             </Button>
           </div>
         </div>

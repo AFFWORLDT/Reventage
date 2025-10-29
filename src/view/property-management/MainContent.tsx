@@ -12,29 +12,30 @@ export default function MainContent() {
           {/* Left Content */}
           <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold text-blue-900 leading-tight font-serif">
-              Do you need Property Management Services?
+              Property Management
             </h2>
             
             <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
               <p>
-                Owning a lucrative rental property requires significant time, expertise, and know-how. Let Revantage alleviate the burden and hassle associated with property management.
+                Managing a property requires time, knowledge, and a hands-on approach. Our property management
+                services are designed to simplify ownership and optimize your returns. We handle every aspect—from
+                listing and leasing to tenant communication, repairs, and financial reporting. With a dedicated team
+                and technology-driven solutions, we ensure your property is well-maintained and consistently
+                profitable.
               </p>
-              
+
               <p>
-                As a leading property management company in Dubai, we provide comprehensive, professional services, handling all aspects of rental property management.
-              </p>
-              
-              <p>
-                We protect your property, deposits, and tenants for rentals in Dubai, handling rental collection, condition reports, and maintenance oversight. Our collaborative approach ensures faster, higher-quality service, and greater transparency, setting us apart.
+                Whether you're a first-time landlord or a seasoned investor, we provide customized strategies to
+                meet your goals and reduce your workload.
               </p>
             </div>
 
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+            <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
               Learn more →
             </Button>
 
             <div className="pt-8">
-              <h3 className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight">
+              <h3 className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight font-sans">
                 Explore what we do as your trusted property manager
               </h3>
             </div>
@@ -44,7 +45,7 @@ export default function MainContent() {
           <div className="relative">
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src="/images/team-consultation.jpg"
+                src="/images/buying-resize.webp"
                 alt="Property Management Team Consultation"
                 fill
                 className="object-cover"

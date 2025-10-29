@@ -22,7 +22,7 @@ export default function WhyUsSection() {
           <div className="relative">
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src="/images/team-awards.jpg"
+                src="/images/properties-for-rent-in-dubai-your-guide-to-the-best-deals.webp"
                 alt="Revantage Team with Awards"
                 fill
                 className="object-cover"
@@ -53,7 +53,7 @@ export default function WhyUsSection() {
               ))}
             </div>
 
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+            <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
               Learn more →
             </Button>
           </div>

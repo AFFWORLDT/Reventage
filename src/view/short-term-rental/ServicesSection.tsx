@@ -45,7 +45,7 @@ export default function ServicesSection() {
       <div className="container mx-auto px-4">
         {/* Top Button */}
         <div className="text-center mb-16">
-          <Button className="bg-primary hover:bg-primary text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+          <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
             List your Property
           </Button>
         </div>
@@ -64,7 +64,7 @@ export default function ServicesSection() {
             <div className="space-y-4">
               {services.map((service, index) => (
                 <div key={index} className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-[#c8b180] rounded-full flex-shrink-0"></div>
                   <span className="text-lg text-gray-700 font-medium">
                     {service}
                   </span>

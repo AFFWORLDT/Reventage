@@ -29,7 +29,7 @@ export default function HeroSection() {
               Exceptional Dubai Holiday Homes and Expert Short-Term Rental Services.
             </p>
 
-            <Button className="bg-primary hover:bg-primary text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+            <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
               List your Property
             </Button>
           </div>

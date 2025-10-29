@@ -8,9 +8,8 @@ export default function QuoteSection() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="text-6xl text-gray-400 mb-4 font-sans">"</div>
           <h2 className="text-4xl font-bold text-gray-800 max-w-4xl mx-auto leading-relaxed font-serif">
-            We don't just create transactions, we build relationships.
+            About Conveyancing
           </h2>
         </div>
 
@@ -19,7 +18,7 @@ export default function QuoteSection() {
           <div className="order-2 lg:order-1">
             <div className="relative h-96 lg:h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/images/building.jpg"
+                src="/images/buying-resize.webp"
                 alt="Professional team collaboration"
                 fill
                 className="object-cover"
@@ -29,35 +28,30 @@ export default function QuoteSection() {
 
           {/* Content */}
           <div className="order-1 lg:order-2">
-            <h3 className="text-4xl font-bold text-blue-900 mb-8">
-              Our Solutions
+            <h3 className="text-4xl font-bold text-blue-900 mb-8 font-sans">
+              What you get
             </h3>
-            
-            <div className="space-y-4 mb-8">
-              {[
-                "Gifting",
-                "Power of Attorney",
-                "Legal Documents Translation",
-                "Will (Property investment)",
-                "Legal Eviction Notice",
-                "Online POA Cancellation",
-                "Document Attestation MOFA",
-                "General Consulting for property transfer"
-              ].map((solution, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-lg text-gray-700 font-medium">
-                    {solution}
-                  </span>
-                </div>
-              ))}
+
+            <div className="space-y-6 mb-8">
+              <div>
+                <h4 className="text-xl font-semibold text-gray-900 font-sans">Smooth & Secure Property Transfers</h4>
+                <p className="text-gray-700">We handle all legal aspects of buying or selling property, ensuring a safe and seamless transaction.</p>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-gray-900 font-sans">Expert Conveyancing You Can Trust</h4>
+                <p className="text-gray-700">From contract to completion, our team ensures your transfer is legally sound and hassle-free.</p>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-gray-900 font-sans">Stress-Free Property Transactions</h4>
+                <p className="text-gray-700">Professional conveyancing for buyers, sellers, and investors—transparent, timely, and efficient.</p>
+              </div>
+              <div>
+                <h4 className="text-xl font-semibold text-gray-900 font-sans">Your Legal Partner in Property Deals</h4>
+                <p className="text-gray-700">We manage paperwork, legal checks, and compliance—so you can focus on your move or investment.</p>
+              </div>
             </div>
 
-            <button className="bg-primary hover:bg-primary text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+            <button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
               Find out more →
             </button>
           </div>

@@ -13,7 +13,7 @@ export default function MainContent() {
           <div className="relative">
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src="/images/analysis.webp"
+                src="/images/buying-resize.webp"
                 alt="Property Valuation Analysis"
                 fill
                 className="object-cover"
@@ -37,12 +37,12 @@ export default function MainContent() {
               </p>
             </div>
 
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+            <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
               Get Your Valuation →
             </Button>
 
             <div className="pt-8">
-              <h3 className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight">
+              <h3 className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight font-sans">
                 Why choose our valuation services
               </h3>
             </div>

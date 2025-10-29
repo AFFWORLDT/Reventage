@@ -27,11 +27,11 @@ export default function ForOwnersSection() {
               Looking to transform your home into A <span className="text-primary">short-term rental in Dubai?</span>
             </h2>
             
-            <h3 className="text-xl font-bold text-blue-900 mb-4">
+            <h3 className="text-xl font-bold text-blue-900 mb-4 font-sans">
               For Property Owners
             </h3>
             
-            <h4 className="text-lg font-semibold text-gray-800 mb-6">
+            <h4 className="text-lg font-semibold text-gray-800 mb-6 font-sans">
               Transform Your Property into a High-Yield Short-Term Rental Elevate Your Property's Potential
             </h4>
             
@@ -39,7 +39,7 @@ export default function ForOwnersSection() {
               Leverage our expertise in converting properties into profitable short-term rentals. Our dedicated team specializes in managing every aspect of the transformation process, ensuring your property not only attracts guests but also generates significant returns. From comprehensive property management to global marketing, we position your home on the world stage, listing it across more than 150 platforms, including Airbnb, Booking.com, and Expedia.
             </p>
 
-            <Button className="bg-primary hover:bg-primary text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+            <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
               Book Now
             </Button>
           </div>

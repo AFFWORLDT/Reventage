@@ -1,79 +1,65 @@
 "use client";
 
 import React from 'react';
-import Image from 'next/image';
-import { Button } from '../../components/ui/button';
+import { Check } from 'lucide-react';
 
 const services = [
   {
     id: 1,
-    title: "Dedicated Account Manager",
-    description: "Our dedicated account manager service provides a single point of contact for all your property needs. Contact us today to simplify your property management experience.",
+    title: "Professional Care for Your Property",
+    description: "End-to-end management services to protect your property and keep your rental income steady.",
     image: "/images/account-manager.jpg"
   },
   {
     id: 2,
-    title: "Tenant Management",
-    description: "Let us take the hassle out of tenant management. We will manage everything from tenant communications to rent collection, ensuring a smooth and efficient rental process.",
+    title: "Your Property, Our Priority",
+    description: "We handle tenants, maintenance, and everything in between so you don’t have to.",
     image: "/images/tenant-management.jpg"
   },
   {
     id: 3,
-    title: "Legal Guidance",
-    description: "Navigating property laws can be daunting. Our legal guidance service provides you with expert advice to ensure compliance and protect your investments.",
+    title: "Stress-Free Property Ownership",
+    description: "From rent collection to 24/7 maintenance—let us manage your property with care and expertise.",
     image: "/images/legal-guidance.jpg"
   },
   {
     id: 4,
-    title: "Smart Portal Integration",
-    description: "Our smart portal integration offers a seamless property management experience. It allows you to track rent payments, maintenance requests, and more from any device.",
+    title: "Maximize Returns, Minimize Hassle",
+    description: "Trusted property management that increases value while saving you time.",
     image: "/images/smart-portal.jpg"
   },
   {
     id: 5,
-    title: "Maintenance and Complaints Resolution",
-    description: "We promptly address maintenance needs, resolve tenant complaints and make sure your tenants are satisfied. Contact us for reliable property upkeep!",
+    title: "Expert Management, Exceptional Results",
+    description: "We treat your property like it’s our own—with transparency, efficiency, and professionalism.",
     image: "/images/maintenance.jpg"
   },
   {
     id: 6,
-    title: "Regular Inspection",
-    description: "Our inspection service helps maintain your property's value by identifying and addressing issues early. Schedule your inspection today to ensure everything stays in top condition!",
+    title: "Connect with a Real Estate Expert",
+    description: "Speak to our Dubai specialists for tailored advice and a seamless start.",
     image: "/images/inspection.jpg"
   }
 ];
 
 export default function ServicesGrid() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
-            <div key={service.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              {/* Service Image */}
-              <div className="relative h-48">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  className="object-cover"
-                />
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-10">
+            {services.map((service) => (
+              <div key={service.id} className="flex items-start space-x-4">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center mt-1">
+                  <Check className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-blue-900 mb-2">{service.title}</h3>
+                  <p className="text-gray-700 leading-relaxed">{service.description}</p>
+                </div>
               </div>
-              
-              {/* Service Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-blue-900 mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  {service.description}
-                </p>
-                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-lg transition-colors duration-200">
-                  Learn More
-                </Button>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

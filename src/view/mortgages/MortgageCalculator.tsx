@@ -35,11 +35,11 @@ export default function MortgageCalculator() {
         {/* Mortgage Calculator */}
         <div className="">
           <div className="bg-blue-50 rounded-2xl p-8 shadow-lg">
-            <h3 className="text-3xl font-bold text-blue-900 mb-4">
-              Mortgage Calculator
+            <h3 className="text-3xl font-bold text-blue-900 mb-4 font-sans">
+              Step 1: Mortgage Details
             </h3>
             <p className="text-gray-600 mb-8">
-              Calculate your monthly mortgage payments with our easy-to-use calculator.
+              Enter your property and loan details to estimate payments.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -106,7 +106,7 @@ export default function MortgageCalculator() {
             {/* Monthly Payment Display */}
             <div className="bg-white rounded-lg p-6 mb-6">
               <div className="text-center">
-                <div className="text-sm text-gray-600 mb-2">Monthly Payments</div>
+                <div className="text-sm text-gray-600 mb-2">Estimated Monthly Payment</div>
                 <div className="text-3xl font-bold text-blue-900">
                   AED {monthlyPayment.toFixed(2)} /month
                 </div>
@@ -127,8 +127,8 @@ export default function MortgageCalculator() {
                 </button>
               </div>
               
-              <Button className="bg-primary hover:bg-primary text-white px-8 py-3 font-semibold rounded-lg transition-colors duration-200">
-                Get a free consultation
+              <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-3 font-semibold rounded-lg transition-colors duration-200">
+                Submit & Show Result
               </Button>
             </div>
           </div>

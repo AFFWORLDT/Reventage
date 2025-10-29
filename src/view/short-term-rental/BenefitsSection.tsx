@@ -57,7 +57,7 @@ export default function BenefitsSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {benefits.map((benefit, index) => (
             <div key={index} className="bg-white rounded-lg p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 text-center">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white mb-6 mx-auto">
+              <div className="w-16 h-16 bg-[#c8b180] rounded-full flex items-center justify-center text-white mb-6 mx-auto">
                 {benefit.icon}
               </div>
               
@@ -73,7 +73,7 @@ export default function BenefitsSection() {
         </div>
 
         <div className="text-center">
-          <Button className="bg-primary hover:bg-primary text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+          <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
             Book Now
           </Button>
         </div>

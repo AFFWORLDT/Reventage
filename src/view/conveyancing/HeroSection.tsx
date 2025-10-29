@@ -35,18 +35,20 @@ export default function HeroSection() {
 
           {/* Main Heading */}
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight text-left font-serif">
-            Your property transactions simplified
+            Conveyancing
           </h1>
 
           {/* Subheading */}
           <p className="text-xl md:text-2xl text-white mb-8 max-w-3xl leading-relaxed text-left">
-            Your single point of contact for successful property transactions.
+            Buying or selling property is one of the biggest financial decisions you’ll make—our team manages
+            the legal, financial, and administrative steps to ensure a smooth, transparent, and compliant
+            transfer of ownership.
           </p>
 
           {/* CTA Button */}
           <div className="text-left">
-            <Button className="bg-primary hover:bg-primary text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
-              Get expert assistance
+            <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+              Connect with an expert
             </Button>
           </div>
         </div>
