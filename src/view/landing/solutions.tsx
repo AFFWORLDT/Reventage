@@ -44,7 +44,7 @@ function Solutions() {
           {/* Luxury Header */}
           <div className="mb-8 sm:mb-12 md:mb-20 text-center">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-light font-serif text-gray-800 leading-tight px-2">
-              Welcome to your luxury <em><span className="text-[#c8b180] not-italic">dream home</span></em>
+              Welcome to your luxury <em><span className="text-[#c8b180] not-italic font-serif">dream home</span></em>
             </h2>
             <p className="text-gray-600 text-base md:text-lg lg:text-xl mt-4 max-w-4xl mx-auto leading-relaxed">
               We specialize in connecting properties with the right people, driven by our commitment to delivering the highest standards of real estate service.

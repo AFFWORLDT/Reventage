@@ -75,7 +75,7 @@ export default function Property() {
             FEATURED PROPERTIES
           </h2>
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-mono mb-3 sm:mb-4 text-[#1A202C] tracking-wide font-serif px-2">
-            Handpicked Luxury Listings <span className="text-[#c8b180]">in Dubai</span>
+            Handpicked Luxury Listings <span className="text-[#c8b180] font-serif">in Dubai</span>
           </h1>
           <p className="max-w-4xl mx-auto text-xs sm:text-sm font-light text-gray-700 leading-relaxed mb-3 sm:mb-4 px-2">
             Step into a realm of unparalleled sophistication with our featured

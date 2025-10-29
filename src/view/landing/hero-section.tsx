@@ -136,7 +136,7 @@ export default function HeroSection() {
           className="text-center mb-8 md:mb-12"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 font-serif leading-tight">
-            Find Luxury Properties <span className="text-[#c8b180]">in Dubai</span>
+            Find Luxury Properties <span className="text-[#c8b180] font-serif">in Dubai</span>
           </h1>
           <h2 className="text-lg md:text-xl lg:text-2xl font-light text-white font-serif">
             Explore our curated selection of exquisite properties and investment opportunities, tailored to exceed your expectations.

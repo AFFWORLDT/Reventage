@@ -105,7 +105,7 @@ export default function Component() {
           COMMUNITIES
         </p>
         <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-mono text-gray-800 mb-4 sm:mb-6 tracking-wide font-serif px-2">
-          Discover Dubai&apos;s <span className="text-[#c8b180]">Finest</span>
+          Discover Dubai&apos;s <span className="text-[#c8b180] font-serif">Finest</span>
         </h1>
         <p className="max-w-4xl mx-auto text-gray-600 text-xs sm:text-sm tracking-tight font-light px-2">
           Explore the diverse tapestry of Dubai&apos;s most sought-after areas

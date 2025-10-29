@@ -139,10 +139,18 @@
   h1, h2 {
     @apply font-serif font-normal;
   }
+  /* Ensure spans inside h1 and h2 inherit serif font */
+  h1 span, h2 span {
+    font-family: var(--font-playfair), "Playfair Display", "Times New Roman", serif;
+  }
   h3, h4, h5, h6 {
     @apply font-sans;
   }
-  p, span, div, a, button, input, select, textarea {
+  p, div, a, button, input, select, textarea {
+    @apply font-sans;
+  }
+  /* Spans outside headings default to sans-serif */
+  span {
     @apply font-sans;
   }
   

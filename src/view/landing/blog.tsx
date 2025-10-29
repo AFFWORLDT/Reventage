@@ -47,7 +47,7 @@ export function InsightsInspiration() {
       <div className="mx-auto px-2 sm:px-4 md:px-6 lg:px-10 xl:px-20 text-center">
         <div>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-mono text-gray-800 mb-3 sm:mb-4 font-serif px-2">
-            Latest <span className="text-[#c8b180]">Blogs</span>
+            Latest <span className="text-[#c8b180] font-serif">Blogs</span>
           </h2>
           <p className="text-xs sm:text-sm font-extralight text-gray-600 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed tracking-wide px-2">
             Stay informed with the latest insights, trends, and expert advice from Dubai's premium real estate market.

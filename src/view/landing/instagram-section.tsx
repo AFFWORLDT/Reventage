@@ -13,7 +13,7 @@ function InstagramSection() {
           {/* Section Header */}
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light font-serif text-gray-800 leading-tight mb-3 sm:mb-4 px-2">
-              Follow Our <span className="text-[#c8b180] font-normal">Journey</span>
+              Follow Our <span className="text-[#c8b180] font-normal font-serif">Journey</span>
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed font-light px-2">
               Discover luxury properties, behind-the-scenes content, and exclusive insights from Dubai's premier real estate destinations.
