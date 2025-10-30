@@ -24,7 +24,7 @@ export default function MainContent() {
 
           {/* Content */}
           <div className="space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-blue-900 leading-tight font-serif">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#4a3f2c] leading-tight font-serif">
               Property Valuation <span className="text-[#c8b180]">Services</span>
             </h2>
             
@@ -45,7 +45,7 @@ export default function MainContent() {
             </Link>
 
             <div className="pt-8">
-              <h3 className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight font-sans">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#4a3f2c] leading-tight font-sans">
                 Why choose our valuation services
               </h3>
             </div>

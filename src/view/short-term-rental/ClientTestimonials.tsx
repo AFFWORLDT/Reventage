@@ -33,7 +33,7 @@ export default function ClientTestimonials() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12">
           <div>
-            <h2 className="text-4xl font-bold text-blue-900 mb-4 font-serif">
+            <h2 className="text-4xl font-bold text-[#4a3f2c] mb-4 font-serif">
               Why Our Clients Trust Us
             </h2>
             <p className="text-xl text-gray-600">

@@ -63,6 +63,7 @@ export default function Header() {
     { href: "/buy", label: "Buy" },
     { href: "/rent", label: "Rent" },
     { href: "/offPlans", label: "Projects" },
+    { href: "/about", label: "About" },
     { href: "/team", label: "Teams" },
     { href: "/communities", label: "Areas" },
     { href: "/service", label: "Services" },
@@ -113,6 +114,7 @@ export default function Header() {
     { href: "/buy", label: "Buy" },
     { href: "/rent", label: "Rent" },
     { href: "/offPlans", label: "Projects" },
+    { href: "/about", label: "About" },
     { href: "/team", label: "Teams" },
     { href: "/communities", label: "Areas" },
     { href: "/service", label: "Services", hasDropdown: true },
@@ -150,8 +152,8 @@ export default function Header() {
             <Image
               src="/images/new_logo.png"
               alt="Revantage Logo"
-              width={100}
-              height={32}
+              width={130}
+              height={40}
               className="object-contain"
             />
           </Link>
@@ -164,20 +166,17 @@ export default function Header() {
               return (
                 <HoverCard key={i} openDelay={200} closeDelay={100}>
                   <HoverCardTrigger asChild>
-                    <Link
-                      href={link.href}
+                    <button
+                      type="button"
                       className={cn(
                         "relative pb-1 transition-all duration-300 font-light text-sm text-gray-700 hover:text-primary-500",
                         "after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0",
-                        "after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full",
-                        pathname === link.href && "after:w-full text-primary-500"
+                        "after:bg-primary-500 after:transition-all after:duration-300 hover:after:w-full"
                       )}
-                      style={{
-                        letterSpacing: "0.5px",
-                      }}
+                      style={{ letterSpacing: "0.5px" }}
                     >
                       {link.label}
-                    </Link>
+                    </button>
                   </HoverCardTrigger>
                   <HoverCardContent className="w-[500px] p-0" sideOffset={10}>
                     <div className="bg-white rounded-lg shadow-xl border border-gray-200">
@@ -204,12 +203,12 @@ export default function Header() {
                                   service.name === "Short Term Rentals" ? "/short-term-rental" :
                                   "/service"
                                 }
-                                className="flex items-center space-x-3 p-2 rounded-lg hover:bg-blue-50 transition-colors duration-200 cursor-pointer group"
+                                className="flex items-center space-x-3 p-2 rounded-lg hover:bg-[#c8b180]/10 transition-colors duration-200 cursor-pointer group"
                               >
-                                <div className="flex-shrink-0 transition-colors duration-200 group-hover:text-blue-600">
+                                <div className="flex-shrink-0 transition-colors duration-200 group-hover:text-[#a68b5b]">
                                   {service.icon}
                                 </div>
-                                <span className="text-blue-900 font-medium text-sm group-hover:text-blue-700 transition-colors duration-200">
+                                <span className="text-gray-800 font-medium text-sm group-hover:text-[#8b7350] transition-colors duration-200">
                                   {service.name}
                                 </span>
                               </Link>
@@ -231,12 +230,12 @@ export default function Header() {
                                   service.name === "Short-Term Rental" ? "/short-term-rental" :
                                   "/service"
                                 }
-                                className="flex items-center space-x-3 p-2 rounded-lg hover:bg-blue-50 transition-colors duration-200 cursor-pointer group"
+                                className="flex items-center space-x-3 p-2 rounded-lg hover:bg-[#c8b180]/10 transition-colors duration-200 cursor-pointer group"
                               >
-                                <div className="flex-shrink-0 transition-colors duration-200 group-hover:text-blue-600">
+                                <div className="flex-shrink-0 transition-colors duration-200 group-hover:text-[#a68b5b]">
                                   {service.icon}
                                 </div>
-                                <span className="text-blue-900 font-medium text-sm group-hover:text-blue-700 transition-colors duration-200">
+                                <span className="text-gray-800 font-medium text-sm group-hover:text-[#8b7350] transition-colors duration-200">
                                   {service.name}
                                 </span>
                               </Link>

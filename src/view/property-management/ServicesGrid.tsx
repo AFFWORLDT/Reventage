@@ -50,11 +50,11 @@ export default function ServicesGrid() {
           <div className="grid md:grid-cols-2 gap-10">
             {services.map((service) => (
               <div key={service.id} className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center mt-1">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#c8b180] flex items-center justify-center mt-1">
                   <Check className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-blue-900 mb-2">{service.title}</h3>
+                  <h3 className="text-xl font-semibold text-[#4a3f2c] mb-2">{service.title}</h3>
                   <p className="text-gray-700 leading-relaxed">{service.description}</p>
                 </div>
               </div>

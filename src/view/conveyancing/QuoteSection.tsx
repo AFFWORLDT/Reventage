@@ -28,7 +28,7 @@ export default function QuoteSection() {
 
           {/* Content */}
           <div className="order-1 lg:order-2">
-            <h3 className="text-4xl font-bold text-blue-900 mb-8 font-sans">
+            <h3 className="text-4xl font-bold text-[#4a3f2c] mb-8 font-sans">
               What you get
             </h3>
 

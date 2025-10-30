@@ -11,7 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/src/components/ui/select";
-import { Search } from "lucide-react";
+import { Search, ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   const [isLoading, setIsLoading] = useState(true);
@@ -91,11 +91,15 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* Enhanced Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/10 z-10" />
-      
-      {/* Cinematic Overlay Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30 z-15" />
+      {/* Custom brand gradient overlay */}
+      <div
+        className="absolute inset-0 z-10"
+        style={{
+          background:
+            "linear-gradient(78.29deg, #05162d 17.15%, rgba(9, 30, 58, 0.19) 81.21%, rgba(7, 26, 51, 0) 103.32%)",
+          opacity: 0.6,
+        }}
+      />
 
       {/* Hero Content with Search Bar */}
       <div className="relative z-20 w-full max-w-7xl mx-auto px-4">
@@ -103,96 +107,57 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-center mb-8 md:mb-12"
+          className="text-left mb-8 md:mb-12"
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 md:mb-6 font-serif leading-tight">
-            Find Luxury Properties <span className="text-[#c8b180] font-serif">in Dubai</span>
+            Find Luxury Properties <span className="text-[#c8b180] font-serif italic">in Dubai</span>
           </h1>
-          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-light text-white font-serif">
+          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-light text-white font-serif max-w-3xl">
             Explore our curated selection of exquisite properties and investment opportunities, tailored to exceed your expectations.
           </h2>
         </motion.div>
 
-        {/* Search Bar */}
+        {/* Slim Search Bar (left-aligned) */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="bg-white rounded-lg shadow-2xl p-3 sm:p-4 md:p-6"
+          className="max-w-3xl"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-3 sm:gap-4">
-            {/* Transaction Type */}
-            <Select value={transactionType} onValueChange={setTransactionType}>
-              <SelectTrigger className="w-full bg-white border-gray-300 h-10 text-sm md:h-12 md:text-base">
-                <SelectValue placeholder="Buy" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="buy">Buy</SelectItem>
-                <SelectItem value="rent">Rent</SelectItem>
-              </SelectContent>
-            </Select>
-
-            {/* Location */}
-            <Input
-              type="text"
-              placeholder="Location"
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
-              className="w-full bg-white border-gray-300 h-10 text-sm md:h-12 md:text-base"
-            />
-
-            {/* Property Type */}
-            <Select value={propertyType} onValueChange={setPropertyType}>
-              <SelectTrigger className="w-full bg-white border-gray-300 h-10 text-sm md:h-12 md:text-base">
-                <SelectValue placeholder="Property Type" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="apartment">Apartment</SelectItem>
-                <SelectItem value="villa">Villa</SelectItem>
-                <SelectItem value="townhouse">Townhouse</SelectItem>
-                <SelectItem value="penthouse">Penthouse</SelectItem>
-                <SelectItem value="studio">Studio</SelectItem>
-              </SelectContent>
-            </Select>
-
-            {/* Price Range */}
-            <Select value={priceRange} onValueChange={setPriceRange}>
-              <SelectTrigger className="w-full bg-white border-gray-300 h-10 text-sm md:h-12 md:text-base">
-                <SelectValue placeholder="Price Range" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="0-500000">Up to AED 500K</SelectItem>
-                <SelectItem value="500000-1000000">AED 500K - 1M</SelectItem>
-                <SelectItem value="1000000-2000000">AED 1M - 2M</SelectItem>
-                <SelectItem value="2000000-5000000">AED 2M - 5M</SelectItem>
-                <SelectItem value="5000000+">AED 5M+</SelectItem>
-              </SelectContent>
-            </Select>
-
-            {/* Bedrooms */}
-            <Select value={bedrooms} onValueChange={setBedrooms}>
-              <SelectTrigger className="w-full bg-white border-gray-300 h-10 text-sm md:h-12 md:text-base">
-                <SelectValue placeholder="Bedrooms" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="studio">Studio</SelectItem>
-                <SelectItem value="1">1 Bedroom</SelectItem>
-                <SelectItem value="2">2 Bedrooms</SelectItem>
-                <SelectItem value="3">3 Bedrooms</SelectItem>
-                <SelectItem value="4">4 Bedrooms</SelectItem>
-                <SelectItem value="5+">5+ Bedrooms</SelectItem>
-              </SelectContent>
-            </Select>
-
-            {/* Search Button */}
-            <Link href={`/buy`}>
-              <Button className="bg-[#c8b180] hover:bg-[#b8a070] text-white w-full h-10 md:h-12 text-sm md:text-base flex items-center justify-center gap-2">
-                <Search className="w-5 h-5" />
-                <span className="font-semibold">Search</span>
-              </Button>
+          <div className="flex items-center gap-2">
+            <div className="flex-1 h-14 rounded-md bg-white/10 backdrop-blur-[2px] border border-white/20 px-4 flex items-center">
+              <Search className="w-5 h-5 text-white/80 mr-3" />
+              <Input
+                type="text"
+                placeholder="Type Project Name, Developer or Location"
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
+                className="w-full h-12 bg-transparent border-0 text-white placeholder:text-white/70 focus-visible:ring-0 focus-visible:ring-offset-0"
+              />
+            </div>
+            <Link href={`/offPlans`} aria-label="Search">
+              <button className="h-14 w-28 md:w-36 bg-white text-blue-950 rounded-md flex items-center justify-center shadow-lg hover:bg-white/90 transition">
+                <ArrowRight className="w-7 h-7" />
+              </button>
             </Link>
           </div>
         </motion.div>
+
+        {/* Bottom stats */}
+        <div className="mt-10 md:mt-16 grid grid-cols-3 gap-6 max-w-xl text-left">
+          <div>
+            <div className="text-4xl md:text-5xl font-bold text-white">200+</div>
+            <div className="text-white/80 mt-2">Luxury Villas Sold</div>
+          </div>
+          <div>
+            <div className="text-4xl md:text-5xl font-bold text-white">15+</div>
+            <div className="text-white/80 mt-2">Years of Experience</div>
+          </div>
+          <div>
+            <div className="text-4xl md:text-5xl font-bold text-white">500+</div>
+            <div className="text-white/80 mt-2">Apartments Sold</div>
+          </div>
+        </div>
       </div>
     </section>
   );

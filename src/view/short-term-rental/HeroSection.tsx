@@ -12,7 +12,7 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
-            <h1 className="text-5xl md:text-6xl font-bold text-blue-900 mb-6 leading-tight font-serif">
+            <h1 className="text-5xl md:text-6xl font-bold text-[#4a3f2c] mb-6 leading-tight font-serif">
               From Finding Your Perfect
               <br />
               <span className="text-primary">Holiday Home</span> Or
@@ -22,7 +22,7 @@ export default function HeroSection() {
               <span className="text-primary">Short-Term Rental,</span>
             </h1>
 
-            <h2 className="text-2xl font-bold text-blue-900 mb-6 font-serif">
+            <h2 className="text-2xl font-bold text-[#4a3f2c] mb-6 font-serif">
               We've Got You Covered!
             </h2>
 

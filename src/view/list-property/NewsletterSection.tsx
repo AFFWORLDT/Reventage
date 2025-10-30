@@ -21,10 +21,10 @@ function NewsletterSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Left Content */}
             <div>
-              <h2 className="text-3xl font-bold text-blue-900 mb-4 font-serif">
+              <h2 className="text-3xl font-bold text-[#4a3f2c] mb-4 font-serif">
                 Stay in the loop
               </h2>
-              <p className="text-lg text-blue-800">
+              <p className="text-lg text-gray-700">
                 Get to know about the latest real estate insights.
               </p>
             </div>

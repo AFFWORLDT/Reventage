@@ -9,6 +9,7 @@ import { CallToAction } from "@/src/view/landing/call-to-action";
 import PartnersSection from "../../view/landing/PartnersSection";
 import Solutions from "../../view/landing/solutions";
 import AboutRevantage from "@/src/view/landing/about-revantage";
+import WhyInvest from "@/src/view/landing/why-invest";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Communities />
       <Property />
       <InsightsInspiration />
+      <WhyInvest />
       <InstagramSection />
       <CallToAction />
     </div>

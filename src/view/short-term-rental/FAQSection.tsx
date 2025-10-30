@@ -41,7 +41,7 @@ export default function FAQSection() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-blue-900 mb-12 text-center font-serif">
+          <h2 className="text-4xl font-bold text-[#4a3f2c] mb-12 text-center font-serif">
             FAQs About Short-Term Rentals in Dubai
           </h2>
 

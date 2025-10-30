@@ -117,6 +117,115 @@ const blogPosts = {
     <p><strong>Ready to find your luxury home?</strong> Contact Revantage to explore our curated selection of Dubai's finest luxury properties.</p>
   `,
   },
+  "is-buying-off-plan-property-in-dubai-worth-it-in-2025": {
+    title: "Is Buying Off-Plan Property in Dubai Worth It in 2025?",
+    subtitle: "A complete look at what off-plan means, pros, cons, key factors, and whether it fits your goals in 2025.",
+    featuredImage: "/images/is-buying-off-plan-property-in-dubai-worth-it-in-2025.webp",
+    date: "October 29, 2025",
+    content: `
+    <h2>What is \"Off-Plan Property\" in Dubai?</h2>
+    <p>An off-plan property is purchased before completion, often at a lower entry price with staged payments across construction milestones and final handover.</p>
+
+    <h2>Why people are asking in 2025</h2>
+    <p>With many launches and handovers, demand remains strong—but timing, price trends, and handover windows matter for returns and liquidity.</p>
+
+    <h2>The Advantages (Pros)</h2>
+    <ul>
+      <li>Lower entry prices and early-bird incentives</li>
+      <li>Flexible payment plans, including post-handover in some cases</li>
+      <li>Modern features and smart homes</li>
+      <li>Capital appreciation potential by completion</li>
+      <li>High rental yield potential upon handover</li>
+      <li>Buyer protections via escrow and strong regulation</li>
+    </ul>
+
+    <h2>The Disadvantages (Cons)</h2>
+    <ul>
+      <li>No immediate rental income until handover</li>
+      <li>Potential project delays and developer risk</li>
+      <li>Market fluctuations during construction</li>
+      <li>Financing complexity linked to milestones</li>
+      <li>Expectation vs reality variances</li>
+      <li>Oversupply risk at mass handovers</li>
+    </ul>
+
+    <h2>Key Factors to Consider</h2>
+    <ul>
+      <li>Developer reputation and delivery record</li>
+      <li>Location, infrastructure, and demand drivers</li>
+      <li>Payment plan structure and escrow safeguards</li>
+      <li>Your horizon and exit plan (sell, rent, or hold)</li>
+      <li>Supply/demand in comparable projects</li>
+    </ul>
+
+    <h2>Is it worth it in 2025?</h2>
+    <p>If you can wait 3–5 years, pick strong locations and reputable developers, and accept interim volatility, off-plan can be compelling. If you need immediate cash flow or want a quick flip, consider ready units instead.</p>
+
+    <p><em>Reference: <a href="https://revantagedxb.com/blog/is-buying-off-plan-property-in-dubai-worth-it-in-2025-1" target="_blank" rel="noopener">Source article</a></em></p>
+    `,
+  },
+  "how-to-buy-off-plan-property-in-dubai-step-by-step-guide-2025": {
+    title: "How to Buy Off-Plan Property in Dubai – Step-by-Step Guide (2025)",
+    subtitle: "A practical walkthrough of definitions, payment plans, legal steps, and risk checks.",
+    featuredImage: "/images/how-to-buy-off-plan-property-in-dubai-step-by-step-guide-2025.webp",
+    date: "October 29, 2025",
+    content: `
+    <h2>What Is Off-Plan Property?</h2>
+    <p>Buying before completion—typically with lower early pricing, modern specs, and flexible payment schedules.</p>
+
+    <h2>Step 1: Define Your Goals</h2>
+    <p>Capital appreciation, rental income, or personal use will shape location, unit type, and payment plan.</p>
+
+    <h2>Step 2: Research the Market</h2>
+    <p>Focus on areas with demand, new infrastructure, and strong master plans (e.g., Dubai Hills Estate, Business Bay, Dubai Creek Harbour).</p>
+
+    <h2>Step 3: Choose a Reputable Developer</h2>
+    <p>Assess track record, delivery timelines, and customer satisfaction.</p>
+
+    <h2>Step 4: Understand Payment Plans</h2>
+    <p>Milestone-based and post-handover options affect cash flow and financing.</p>
+
+    <h2>Step 5: Complete the Process</h2>
+    <p>Reservation, SPA, escrow payments, and ongoing milestone releases.</p>
+
+    <h2>Step 6: Inspect Contracts & Legal</h2>
+    <p>Confirm escrow, penalties for delay, and specification schedules.</p>
+
+    <h2>Step 7: Handover & Post-Purchase</h2>
+    <p>Snagging, service charge setup, DLD procedures, and leasing/sale strategy.</p>
+
+    <h2>FAQs</h2>
+    <ul>
+      <li>Typical upfront: 10–20%</li>
+      <li>Foreigners can buy in freehold areas</li>
+      <li>Delays happen—ensure SPA protections</li>
+      <li>Post-handover plans ease cash flow</li>
+      <li>Key risks: oversupply, market swings, developer reliability</li>
+    </ul>
+
+    <p><em>Reference: <a href="https://revantagedxb.com/blog/how-to-buy-off-plan-property-in-dubai-step-by-step-guide-2025" target="_blank" rel="noopener">Source article</a></em></p>
+    `,
+  },
+  "top-5-off-plan-projects-in-dubai-for-2025": {
+    title: "Top 5 Off-Plan Projects in Dubai for 2025",
+    subtitle: "A curated shortlist of standout off-plan development opportunities for the year.",
+    featuredImage: "/images/top-5-off-plan-projects-in-dubai-for-2025.webp",
+    date: "October 29, 2025",
+    content: `
+    <h2>Projects to Watch</h2>
+    <p>Our 2025 shortlist highlights prime-located, reputable-developer launches with strong amenity mixes and demand drivers. Speak to our team for current availability, payment plans, and launch timelines.</p>
+
+    <ul>
+      <li>Project 1 – Flagship community with waterfront or skyline views</li>
+      <li>Project 2 – Family-focused master plan near schools and parks</li>
+      <li>Project 3 – City-core lifestyle with high rental appeal</li>
+      <li>Project 4 – Boutique luxury with limited inventory</li>
+      <li>Project 5 – Value-led with attractive post-handover plan</li>
+    </ul>
+
+    <p><em>Reference: <a href="https://revantagedxb.com/blog/top-5-off-plan-projects-in-dubai-for-2025" target="_blank" rel="noopener">Source overview</a></em></p>
+    `,
+  },
 };
 
 export default function DetailsBlog({ slug }: { slug: string }) {

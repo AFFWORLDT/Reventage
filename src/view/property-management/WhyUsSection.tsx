@@ -33,7 +33,7 @@ export default function WhyUsSection() {
 
           {/* Right Content */}
           <div className="space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-blue-900 leading-tight font-serif">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#4a3f2c] leading-tight font-serif">
               Why Us?
             </h2>
             
@@ -44,7 +44,7 @@ export default function WhyUsSection() {
             <div className="space-y-4">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center mt-0.5">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#c8b180] rounded-full flex items-center justify-center mt-0.5">
                     <Check className="w-4 h-4 text-white" />
                   </div>
                   <p className="text-gray-700 leading-relaxed">

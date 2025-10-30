@@ -38,7 +38,7 @@ export default function WhyWorkWithUs() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-blue-900 mb-4 font-serif">
+          <h2 className="text-4xl font-bold text-[#4a3f2c] mb-4 font-serif">
             Why Choose Our Mortgage Assistance?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

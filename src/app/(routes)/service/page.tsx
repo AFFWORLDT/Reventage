@@ -73,9 +73,12 @@ export default function Services() {
       {/* Hero Section */}
       <section className="pt-32 pb-12 px-4 bg-white">
         <div className="container mx-auto text-center">
-          <h1 className="text-5xl font-medium mb-6 text-black font-serif font-bold">
+          <h1 className="text-5xl font-medium mb-3 text-black font-serif font-bold">
             Services
           </h1>
+          <p className="text-lg sm:text-xl text-gray-700">
+            Welcome to your <span className="text-[#c8b180] font-semibold">luxury dream home</span>
+          </p>
         </div>
       </section>
 

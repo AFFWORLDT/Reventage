@@ -6,16 +6,30 @@ import Image from "next/image";
 
 export function CallToAction() {
   return (
-    <section className="relative py-12 sm:py-16 md:py-24 overflow-hidden bg-[#F8F5EF]">
-]      <div className="absolute bottom-0 inset-x-0 w-full h-48 sm:h-64 md:h-96 opacity-40">
+    <section className="relative py-20 sm:py-24 md:py-36 overflow-hidden bg-[#F8F5EF]">
+      {/* Background image with subtle overlay for readability */}
+      <div className="absolute inset-0">
         <Image
-          src="/images/dubai-skyline-30.svg" 
-          alt="Dubai Skyline"
+          src="/images/properties-for-rent-in-dubai-your-guide-to-the-best-deals.webp"
+          alt="Luxury properties background"
           fill
-          className="object-bottom"
-          priority
+          className="object-cover"
+          style={{ objectPosition: 'right top' }}
+          priority={false}
+        />
+        {/* Soft beige tint to match brand */}
+        <div className="absolute inset-0 bg-[#F8F5EF]/20" />
+        {/* Readability overlay: darker on left, fades to transparent on right to keep face visible */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(5,22,45,0.55) 0%, rgba(5,22,45,0.35) 35%, rgba(5,22,45,0.15) 60%, rgba(5,22,45,0) 85%)",
+          }}
         />
       </div>
+
+
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-2 sm:px-4 md:px-6 lg:px-10 xl:px-20 text-center">

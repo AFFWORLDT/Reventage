@@ -12,7 +12,7 @@ export default function MainContent() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-blue-900 leading-tight font-serif">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#4a3f2c] leading-tight font-serif">
               Development Sales and <span className="text-[#c8b180]">Consultancy</span>
             </h2>
             
@@ -33,7 +33,7 @@ export default function MainContent() {
             </Link>
 
             <div className="pt-8">
-              <h3 className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight font-sans">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#4a3f2c] leading-tight font-sans">
                 What we offer as your development partner
               </h3>
             </div>

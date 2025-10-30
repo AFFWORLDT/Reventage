@@ -50,7 +50,7 @@ export default function BenefitsSection() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-blue-900 mb-8 font-serif">
+          <h2 className="text-4xl font-bold text-[#4a3f2c] mb-8 font-serif">
             Why <span className="text-primary">holiday homes</span> in Dubai are a good <span className="text-primary">option?</span>
           </h2>
         </div>

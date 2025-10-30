@@ -18,14 +18,14 @@ function WhyRevantage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
-            <h2 className="text-4xl font-bold text-blue-900 mb-8 font-serif">
+            <h2 className="text-4xl font-bold text-[#4a3f2c] mb-8 font-serif">
               Why list your property with Revantage?
             </h2>
             
             <div className="space-y-4 mb-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <div className="flex-shrink-0 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
+                  <div className="flex-shrink-0 w-6 h-6 bg-[#c8b180] rounded-full flex items-center justify-center">
                     <Check className="w-4 h-4 text-white" />
                   </div>
                   <p className="text-gray-700 text-lg">{benefit}</p>
@@ -33,7 +33,7 @@ function WhyRevantage() {
               ))}
             </div>
 
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 flex items-center">
+            <button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 flex items-center">
               List Your Property
               <span className="ml-2">→</span>
             </button>
@@ -41,13 +41,13 @@ function WhyRevantage() {
 
           {/* Right Content - 3D House Graphic */}
           <div className="relative">
-            <div className="relative w-full h-96 bg-gradient-to-br from-blue-50 to-gray-100 rounded-2xl flex items-center justify-center">
+            <div className="relative w-full h-96 bg-gradient-to-br from-[#fef9c3] to-gray-100 rounded-2xl flex items-center justify-center">
               {/* House */}
               <div className="relative">
                 <div className="w-48 h-32 bg-white border-4 border-gray-300 rounded-lg shadow-lg">
                   <div className="grid grid-cols-3 gap-1 p-2">
                     {[...Array(6)].map((_, i) => (
-                      <div key={i} className="w-full h-8 bg-blue-200 rounded"></div>
+                      <div key={i} className="w-full h-8 bg-[#fde047] rounded"></div>
                     ))}
                   </div>
                 </div>

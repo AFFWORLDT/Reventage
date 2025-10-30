@@ -8,7 +8,7 @@ export default function ProcessSection() {
       number: 1,
       title: "Connect With Us",
       description: "A simple call, email, or WhatsApp message starts your journey.",
-      color: "bg-blue-900"
+      color: "bg-[#a68b5b]"
     },
     {
       number: 2,
@@ -20,7 +20,7 @@ export default function ProcessSection() {
       number: 3,
       title: "Seamless Transition",
       description: "Upon agreement, we manage every detail, from staging your home to professional photography.",
-      color: "bg-blue-900"
+      color: "bg-[#a68b5b]"
     },
     {
       number: 4,
@@ -32,7 +32,7 @@ export default function ProcessSection() {
       number: 5,
       title: "High Investment",
       description: "Enjoy the benefits of increased bookings and higher revenue with minimal effort.",
-      color: "bg-blue-900"
+      color: "bg-[#a68b5b]"
     }
   ];
 
@@ -40,7 +40,7 @@ export default function ProcessSection() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-blue-900 mb-4 font-serif">
+          <h2 className="text-4xl font-bold text-[#4a3f2c] mb-4 font-serif">
             Simplified Process for <span className="text-primary">Maximum Return</span>
           </h2>
         </div>
@@ -136,7 +136,7 @@ export default function ProcessSection() {
                       
                       {/* Step content */}
                       <div className="text-center max-w-48">
-                        <h3 className="font-bold text-blue-900 mb-2 text-base">
+                        <h3 className="font-bold text-[#4a3f2c] mb-2 text-base">
                           {step.title}
                         </h3>
                         <p className="text-gray-600 text-sm leading-relaxed">

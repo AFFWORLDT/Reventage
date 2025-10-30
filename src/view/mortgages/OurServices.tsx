@@ -31,7 +31,7 @@ export default function OurServices() {
 
           {/* Content */}
           <div className="order-1 lg:order-2">
-            <h2 className="text-4xl font-bold text-blue-900 mb-6 font-serif">
+            <h2 className="text-4xl font-bold text-[#4a3f2c] mb-6 font-serif">
               Our Services
             </h2>
             

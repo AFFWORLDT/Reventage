@@ -27,7 +27,7 @@ export default function ForGuestsSection() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-blue-900 mb-6 font-serif">
+          <h2 className="text-4xl font-bold text-[#4a3f2c] mb-6 font-serif">
             <span className="text-primary">For Guests:</span> Discover Unparalleled Holiday Homes. Luxury, Comfort, and Convenience
           </h2>
           

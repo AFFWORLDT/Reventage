@@ -56,7 +56,7 @@ export default function ServicesSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
-            <h2 className="text-4xl font-bold text-blue-900 mb-8 font-serif">
+            <h2 className="text-4xl font-bold text-[#4a3f2c] mb-8 font-serif">
               Our Comprehensive
               <br />
               Services For Homeowners

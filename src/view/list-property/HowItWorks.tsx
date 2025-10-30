@@ -36,7 +36,7 @@ function HowItWorks() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {steps.map((step, index) => (
             <div key={index} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center text-white mb-4 mx-auto">
+              <div className="w-16 h-16 bg-[#c8b180] rounded-full flex items-center justify-center text-white mb-4 mx-auto">
                 {step.icon}
               </div>
               <div className="text-center">
@@ -50,7 +50,7 @@ function HowItWorks() {
 
         {/* Client Trust Section */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-blue-900 mb-4 font-serif">
+          <h2 className="text-4xl font-bold text-[#4a3f2c] mb-4 font-serif">
             What Our <span className="text-[#c8b180]">Client Says</span>
           </h2>
           <p className="text-xl text-gray-600 mb-8">

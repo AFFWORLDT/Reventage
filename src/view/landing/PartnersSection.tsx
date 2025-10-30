@@ -1,202 +1,136 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
+// Render a single logo file from /public/PartnerLogo exactly as named
+function FileLogo({ file }: { file: string }) {
+  const [hide, setHide] = useState(false)
+  if (hide) return null
+  const src = `/PartnerLogo/${encodeURIComponent(file)}`
+  return (
+    <img
+      src={src}
+      alt=""
+      width={140}
+      height={60}
+      loading="lazy"
+      className="object-contain w-[120px] h-[52px] min-w-[120px] grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+      onError={() => setHide(true)}
+    />
+  )
+}
+
 function PartnersSection() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  
-  const partners = [
-    {
-      name: "EMAAR",
-      logo: (
-        <div className="text-gray-800 font-light text-sm tracking-wider">EMAAR</div>
-      )
-    },
-    {
-      name: "DAMAC",
-      logo: (
-        <div className="text-gray-800 font-light text-sm tracking-wider italic">DAMAC</div>
-      )
-    },
-    {
-      name: "DUBAI HOLDING",
-      logo: (
-        <div className="text-gray-800 font-light text-sm tracking-wider">DUBAI HOLDING</div>
-      )
-    },
-    {
-      name: "MERAAS",
-      logo: (
-        <div className="flex items-center space-x-2">
-          <div className="w-3 h-3 border border-gray-600 flex items-center justify-center">
-            <div className="w-1.5 h-1.5 bg-gray-600"></div>
-          </div>
-          <span className="text-gray-800 font-light text-sm tracking-wider">MERAAS</span>
-        </div>
-      )
-    },
-    {
-      name: "AZIZI",
-      logo: (
-        <div className="text-gray-800 font-light text-sm tracking-wider">AZIZI</div>
-      )
-    },
-    {
-      name: "NAKHEEL",
-      logo: (
-        <div className="text-gray-800 font-light text-sm tracking-wider">NAKHEEL</div>
-      )
-    },
-    {
-      name: "NSHAMA",
-      logo: (
-        <div className="text-gray-800 font-light text-sm tracking-wider">NSHAMA</div>
-      )
-    },
-    {
-      name: "SELECT GROUP",
-      logo: (
-        <div className="text-gray-800 font-light text-sm tracking-wider">SELECT GROUP</div>
-      )
-    },
-    {
-      name: "SOBHA",
-      logo: (
-        <div className="text-gray-800 font-light text-sm tracking-wider">SOBHA</div>
-      )
-    },
-    {
-      name: "ALDAR",
-      logo: (
-        <div className="text-gray-800 font-light text-sm tracking-wider">ALDAR</div>
-      )
-    },
-    {
-      name: "ACUBE DEVELOPMENTS",
-      logo: (
-        <div className="flex flex-col items-center">
-          <span className="text-gray-800 font-light text-xs tracking-wider">ACUBE</span>
-          <span className="text-gray-600 font-light text-xs tracking-wider">DEVELOPMENTS</span>
-        </div>
-      )
-    },
-    {
-      name: "IMTIAZ",
-      logo: (
-        <div className="text-gray-800 font-light text-sm tracking-wider">IMTIAZ</div>
-      )
-    },
-    {
-      name: "MAJID AL FUTTAIM",
-      logo: (
-        <div className="flex flex-col items-center">
-          <span className="text-gray-800 font-light text-xs tracking-wider">MAJID AL</span>
-          <span className="text-gray-600 font-light text-xs tracking-wider">FUTTAIM</span>
-        </div>
-      )
-    },
-    {
-      name: "BINGHATTI",
-      logo: (
-        <div className="text-gray-800 font-light text-sm tracking-wider">BINGHATTI</div>
-      )
-    },
-    {
-      name: "OMNIYAT",
-      logo: (
-        <div className="text-gray-800 font-light text-sm tracking-wider">OMNIYAT</div>
-      )
-    }
+  // HARD-CODED list of files located in /public/PartnerLogo (include extensions)
+  const FILES: string[] = [
+    'emaar_logo-resize.webp',
+    'damac_logo-resize.webp',
+    'dubai-holding_logo-resize.webp',
+    'meraas_logo-resize.webp',
+    'azizi_logo-resize.webp',
+    'nakheel_logo-resize.webp',
+    'nshama_logo-resize.webp',
+    'select-group_logo-resize.webp',
+    'sobha_logo-resize.webp',
+    'aldar_logo-resize.webp',
+    'acube-developments_logo-resize.webp',
+    'imtiaz_logo-resize.webp',
+    'majid-al-futtaim_logo-resize.webp',
+    'binghatti_logo-resize.webp',
+    'omniyat_logo-resize.webp'
   ]
 
-  // Auto-rotate carousel on mobile
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % partners.length)
-    }, 3000)
+  const [logos, setLogos] = useState<string[]>(FILES)
+  const [index, setIndex] = useState(0)
+  const [paused, setPaused] = useState(false)
+  const [itemsPerView, setItemsPerView] = useState(1)
 
-    return () => clearInterval(interval)
-  }, [partners.length])
+  // responsive items per view
+  useEffect(() => {
+    const calc = () => {
+      const w = typeof window !== 'undefined' ? window.innerWidth : 375
+      if (w >= 1024) setItemsPerView(7) // laptop/desktop
+      else if (w >= 640) setItemsPerView(3) // tablets
+      else setItemsPerView(1) // phones
+    }
+    calc()
+    window.addEventListener('resize', calc)
+    return () => window.removeEventListener('resize', calc)
+  }, [])
+
+  useEffect(() => {
+    if (paused) return
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % logos.length)
+    }, 2500)
+    return () => clearInterval(id)
+  }, [logos.length, paused])
 
   return (
-    <section className="py-6 sm:py-8 bg-gradient-to-r from-[#F8F6F0] via-white to-[#F2EEE8] border-t border-b border-gray-100">
-      <div className="max-w-6xl mx-auto px-2 sm:px-4 md:px-6">
-        {/* Desktop Layout */}
-        <div className="hidden md:flex items-center justify-between">
-          {/* Header */}
-          <div className="flex-shrink-0">
-            <h2 className="text-gray-600 text-sm font-light tracking-widest uppercase font-sans">
-              Trusted Partners
-            </h2>
-          </div>
-
-          {/* Partners */}
-          <div className="flex-1 ml-12">
-            <div className="flex items-center justify-between">
-              {partners.map((partner, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 0.6 }}
-                  whileHover={{ opacity: 1, scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                  className="flex-shrink-0 px-6 transition-all duration-300"
-                >
-                  {partner.logo}
-                </motion.div>
-              ))}
-            </div>
-          </div>
+    <section className="py-8 sm:py-10 bg-gradient-to-r from-[#F8F6F0] via-white to-[#F2EEE8] border-t border-b border-gray-100">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="font-serif font-bold text-[#05162d] text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight">
+            Trusted Partners
+          </h2>
         </div>
 
-        {/* Mobile Layout with Carousel */}
-        <div className="md:hidden">
-          {/* Header */}
-          <div className="text-center mb-6">
-            <motion.h2 
-              initial={{ opacity: 0, y: -20 }}
+        {/* Carousel (responsive items per view) */}
+        <div
+          className="relative flex items-center justify-center h-[56px] sm:h-[64px] md:h-[72px]"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`${index}-${itemsPerView}`}
+              initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-gray-600 text-xs sm:text-sm font-light tracking-widest uppercase font-sans"
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.35 }}
+              className="flex items-center justify-center gap-6 sm:gap-8 md:gap-10"
             >
-              Partners with Dubai's leading developers
-            </motion.h2>
-          </div>
+              {Array.from({ length: itemsPerView }).map((_, k) => {
+                const file = logos[(index + k) % logos.length]
+                return (
+                  <div key={k} className="flex items-center justify-center">
+                    <FileLogo file={file} />
+                  </div>
+                )
+              })}
+            </motion.div>
+          </AnimatePresence>
 
-          {/* Carousel Container */}
-          <div className="relative overflow-hidden">
-            <div className="flex transition-transform duration-500 ease-in-out" 
-                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-              {partners.map((partner, index) => (
-                <div key={index} className="w-full flex-shrink-0 flex justify-center">
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="opacity-80 hover:opacity-100 transition-opacity duration-300"
-                  >
-                    {partner.logo}
-                  </motion.div>
-                </div>
-              ))}
-            </div>
-          </div>
+          {/* Controls */}
+          <button
+            aria-label="Previous"
+            className="absolute left-0 sm:left-2 p-2 text-gray-400 hover:text-gray-600"
+            onClick={() => setIndex((i) => (i - 1 + logos.length) % logos.length)}
+          >
+            ‹
+          </button>
+          <button
+            aria-label="Next"
+            className="absolute right-0 sm:right-2 p-2 text-gray-400 hover:text-gray-600"
+            onClick={() => setIndex((i) => (i + 1) % logos.length)}
+          >
+            ›
+          </button>
+        </div>
 
-          {/* Carousel Indicators */}
-          <div className="flex justify-center mt-4 sm:mt-6 space-x-1 sm:space-x-2">
-            {partners.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex 
-                    ? 'bg-[#c8b180] scale-125' 
-                    : 'bg-gray-300 hover:bg-gray-400'
-                }`}
-              />
-            ))}
-          </div>
+        {/* Dots */}
+        <div className="mt-4 flex justify-center gap-2">
+          {logos.map((_, i) => (
+            <button
+              key={i}
+              aria-label={`Go to slide ${i + 1}`}
+              className={`h-1.5 rounded-full transition-all ${i === index ? 'w-6 bg-[#c8b180]' : 'w-2 bg-gray-300'}`}
+              onClick={() => setIndex(i)}
+            />)
+          )}
         </div>
       </div>
+
+      {/* No marquee styles needed */}
     </section>
   )
 }

@@ -37,6 +37,27 @@ const blogPosts = [
     description: "Everything you need to know about purchasing luxury properties in Dubai, from villas to townhouses, with expert tips and insights...",
     href: "/blog/details/ultimate-guide-buying-luxury-home-dubai",
   },
+  {
+    imageSrc: "/images/is-buying-off-plan-property-in-dubai-worth-it-in-2025-1.webp",
+    date: "Oct 29, 2025",
+    title: "Is Buying Off-Plan Property in Dubai Worth It in 2025?",
+    description: "Pros, cons, key factors, and whether off-plan makes sense for you in 2025.",
+    href: "/blog/details/is-buying-off-plan-property-in-dubai-worth-it-in-2025",
+  },
+  {
+    imageSrc: "/images/how-to-buy-off-plan-property-in-dubai-step-by-step-guide-2025.webp",
+    date: "Oct 29, 2025",
+    title: "How to Buy Off-Plan Property in Dubai – Step-by-Step Guide (2025)",
+    description: "Understand off-plan, payment plans, the buying process, and risk checks in 2025.",
+    href: "/blog/details/how-to-buy-off-plan-property-in-dubai-step-by-step-guide-2025",
+  },
+  {
+    imageSrc: "/images/top-5-off-plan-projects-in-dubai-for-2025.webp",
+    date: "Oct 29, 2025",
+    title: "Top 5 Off-Plan Projects in Dubai for 2025",
+    description: "A curated list of standout off-plan projects to watch in 2025.",
+    href: "/blog/details/top-5-off-plan-projects-in-dubai-for-2025",
+  },
 ];
 
 function Blog() {

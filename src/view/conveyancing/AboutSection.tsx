@@ -12,7 +12,7 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="order-2 lg:order-1">
-            <h2 className="text-4xl font-bold text-blue-900 mb-6 font-serif">
+            <h2 className="text-4xl font-bold text-[#4a3f2c] mb-6 font-serif">
               Conveyancing
             </h2>
 

@@ -58,7 +58,7 @@ export default function FAQTestimonials() {
       <div className="container mx-auto px-4">
         {/* FAQ Section */}
         <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 text-center mb-12 font-serif">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#4a3f2c] text-center mb-12 font-serif">
             FAQs About Revantage Property Management Service Dubai
           </h2>
           
@@ -69,11 +69,11 @@ export default function FAQTestimonials() {
                   onClick={() => toggleFAQ(index)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
                 >
-                  <span className="text-lg font-semibold text-blue-900">
+                  <span className="text-lg font-semibold text-[#4a3f2c]">
                     {faq.question}
                   </span>
                   <Plus 
-                    className={`w-6 h-6 text-blue-900 transition-transform duration-200 ${
+                    className={`w-6 h-6 text-[#4a3f2c] transition-transform duration-200 ${
                       openFAQ === index ? 'rotate-45' : ''
                     }`} 
                   />
@@ -95,14 +95,14 @@ export default function FAQTestimonials() {
         <div>
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-blue-900 font-serif">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#4a3f2c] font-serif">
                 Why Our Clients Trust Us
               </h2>
               <p className="text-gray-600 mt-2">
                 Discover what our customers are saying about their experiences.
               </p>
             </div>
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg transition-colors duration-200">
+            <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-6 py-3 rounded-lg transition-colors duration-200">
               See all reviews
             </Button>
           </div>
@@ -117,7 +117,7 @@ export default function FAQTestimonials() {
                     </span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-blue-900">{testimonial.name}</h4>
+                  <h4 className="font-semibold text-[#4a3f2c]">{testimonial.name}</h4>
                     <p className="text-sm text-gray-500">{testimonial.time}</p>
                   </div>
                 </div>
@@ -128,7 +128,7 @@ export default function FAQTestimonials() {
                   ))}
                 </div>
                 
-                <h5 className="font-semibold text-blue-900 mb-2">
+                <h5 className="font-semibold text-[#4a3f2c] mb-2">
                   {testimonial.title}
                 </h5>
                 

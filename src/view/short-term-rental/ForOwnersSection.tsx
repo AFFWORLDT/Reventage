@@ -24,11 +24,11 @@ export default function ForOwnersSection() {
 
           {/* Right Content */}
           <div className="order-1 lg:order-2">
-            <h2 className="text-4xl font-bold text-blue-900 mb-4 font-serif">
+            <h2 className="text-4xl font-bold text-[#4a3f2c] mb-4 font-serif">
               Looking to transform your home into A <span className="text-primary">short-term rental in Dubai?</span>
             </h2>
             
-            <h3 className="text-xl font-bold text-blue-900 mb-4 font-sans">
+            <h3 className="text-xl font-bold text-[#4a3f2c] mb-4 font-sans">
               For Property Owners
             </h3>
             
