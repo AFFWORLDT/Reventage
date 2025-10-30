@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '../../components/ui/button';
+import Link from 'next/link';
 
 export default function HeroSection() {
   return (
@@ -47,9 +48,11 @@ export default function HeroSection() {
 
           {/* CTA Button */}
           <div className="text-left">
-            <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
-              Connect with an expert
-            </Button>
+            <Link href="/contactUs">
+              <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+                Connect with an expert
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

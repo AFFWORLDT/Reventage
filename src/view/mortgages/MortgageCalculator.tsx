@@ -114,7 +114,7 @@ export default function MortgageCalculator() {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-between items-center" id="calculator">
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
                   Apply For Home Loan
@@ -127,9 +127,11 @@ export default function MortgageCalculator() {
                 </button>
               </div>
               
-              <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-3 font-semibold rounded-lg transition-colors duration-200">
-                Submit & Show Result
-              </Button>
+              <a href="#thank-you" className="inline-block">
+                <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-3 font-semibold rounded-lg transition-colors duration-200">
+                  Submit & Show Result
+                </Button>
+              </a>
             </div>
           </div>
         </div>

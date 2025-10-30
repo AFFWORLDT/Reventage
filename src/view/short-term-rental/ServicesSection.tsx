@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '../../components/ui/button';
+import Link from 'next/link';
 
 export default function ServicesSection() {
   const services = [
@@ -45,9 +46,11 @@ export default function ServicesSection() {
       <div className="container mx-auto px-4">
         {/* Top Button */}
         <div className="text-center mb-16">
-          <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
-            List your Property
-          </Button>
+          <Link href="/list-your-property">
+            <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+              List your Property
+            </Button>
+          </Link>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">

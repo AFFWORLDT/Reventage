@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '../../components/ui/button';
+import Link from 'next/link';
 
 export default function AboutSection() {
   return (
@@ -31,9 +32,11 @@ export default function AboutSection() {
             </div>
 
             <div className="mt-8">
-              <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
-                Enquire now →
-              </Button>
+              <Link href="/conveyancing">
+                <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+                  Enquire now →
+                </Button>
+              </Link>
             </div>
           </div>
 

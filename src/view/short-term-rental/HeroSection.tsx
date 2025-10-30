@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '../../components/ui/button';
+import Link from 'next/link';
 
 export default function HeroSection() {
   return (
@@ -29,9 +30,11 @@ export default function HeroSection() {
               Exceptional Dubai Holiday Homes and Expert Short-Term Rental Services.
             </p>
 
-            <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
-              List your Property
-            </Button>
+            <Link href="/list-your-property">
+              <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+                List your Property
+              </Button>
+            </Link>
           </div>
 
           {/* Right Image */}

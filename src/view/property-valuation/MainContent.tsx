@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '../../components/ui/button';
+import Link from 'next/link';
 
 export default function MainContent() {
   return (
@@ -37,9 +38,11 @@ export default function MainContent() {
               </p>
             </div>
 
-            <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
-              Get Your Valuation →
-            </Button>
+            <Link href="/property-valuation">
+              <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+                Get Your Valuation →
+              </Button>
+            </Link>
 
             <div className="pt-8">
               <h3 className="text-3xl md:text-4xl font-bold text-blue-900 leading-tight font-sans">

@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '../../components/ui/button';
+import Link from 'next/link';
 
 export default function HeroSection() {
   return (
@@ -47,12 +48,16 @@ export default function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 text-left">
-            <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
-              Get pre-approved now!
-            </Button>
-            <Button variant="outline" className="bg-white hover:bg-gray-50 text-gray-800 border-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
-              Mortgage Calculator
-            </Button>
+            <Link href="/mortgages">
+              <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+                Get pre-approved now!
+              </Button>
+            </Link>
+            <Link href="/mortgages#calculator">
+              <Button variant="outline" className="bg-white hover:bg-gray-50 text-gray-800 border-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+                Mortgage Calculator
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

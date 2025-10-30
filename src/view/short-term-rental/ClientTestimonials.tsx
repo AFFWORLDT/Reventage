@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Button } from '../../components/ui/button';
+import Link from 'next/link';
 import { Star, ChevronRight } from 'lucide-react';
 
 export default function ClientTestimonials() {
@@ -40,9 +41,11 @@ export default function ClientTestimonials() {
             </p>
           </div>
           
-          <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-6 py-3 font-semibold rounded-lg transition-colors duration-200 mt-6 lg:mt-0">
-            See all reviews
-          </Button>
+          <Link href="/about#testimonials">
+            <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-6 py-3 font-semibold rounded-lg transition-colors duration-200 mt-6 lg:mt-0">
+              See all reviews
+            </Button>
+          </Link>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">

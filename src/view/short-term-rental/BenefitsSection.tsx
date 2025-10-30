@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Button } from '../../components/ui/button';
+import Link from 'next/link';
 import { 
   Home, 
   Camera, 
@@ -73,9 +74,11 @@ export default function BenefitsSection() {
         </div>
 
         <div className="text-center">
-          <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
-            Book Now
-          </Button>
+          <Link href="/contactUs">
+            <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+              Book Now
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

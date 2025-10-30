@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button } from '../../components/ui/button';
+import Link from 'next/link';
 
 export default function ForOwnersSection() {
   return (
@@ -39,9 +40,11 @@ export default function ForOwnersSection() {
               Leverage our expertise in converting properties into profitable short-term rentals. Our dedicated team specializes in managing every aspect of the transformation process, ensuring your property not only attracts guests but also generates significant returns. From comprehensive property management to global marketing, we position your home on the world stage, listing it across more than 150 platforms, including Airbnb, Booking.com, and Expedia.
             </p>
 
-            <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
-              Book Now
-            </Button>
+            <Link href="/contactUs">
+              <Button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+                Book Now
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

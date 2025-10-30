@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Input } from "@/src/components/ui/input";
+import Link from "next/link";
 import { Button } from "@/src/components/ui/button";
 import {
   Select,
@@ -45,7 +46,7 @@ export default function HeroSection() {
 
   return (
     <section 
-      className="relative h-screen md:h-[115vh] w-full flex items-center justify-center text-center bg-gradient-to-br from-[#F8F6F0] via-white to-[#F2EEE8] overflow-hidden px-2 sm:px-4"
+      className="relative min-h-[90vh] sm:min-h-[100vh] md:h-[115vh] w-full flex items-center justify-center text-center bg-gradient-to-br from-[#F8F6F0] via-white to-[#F2EEE8] overflow-hidden px-2 sm:px-4 pt-20 pb-10 sm:pt-24 sm:pb-12"
     >
       {/* Luxury Loading Overlay */}
       {isLoading && (
@@ -75,50 +76,19 @@ export default function HeroSection() {
 
       {/* Optimized Video Background */}
       <div className="absolute inset-0 w-full h-full">
-        {isLoading ? (
-          <Image
-            src="/images/bgImage.webp"
-            alt="Luxury Living in Dubai"
-            fill
-            className="object-cover z-0"
-            style={{
-              filter: isMobile ? 'brightness(1.1) contrast(1.05)' : 'brightness(1.2) contrast(1.1) saturate(1.1)'
-            }}
-            quality={isMobile ? 60 : 80}
-            priority
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-          />
-        ) : (
-          <div className="relative w-full h-full">
-            {/* Hero Video Background - Optimized for mobile */}
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload={isMobile ? "metadata" : "auto"}
-              className="absolute inset-0 w-full h-full object-cover z-0"
-              style={{
-                filter: isMobile ? 'brightness(1.1) contrast(1.05)' : 'brightness(1.2) contrast(1.1) saturate(1.1)'
-              }}
-              poster="/images/bgImage.webp"
-            >
-              <source src="/her.mp4" type="video/mp4" />
-              {/* Fallback for browsers that don't support video */}
-              <Image
-                src="/images/bgImage.webp"
-                alt="Luxury Living in Dubai"
-                fill
-                className="object-cover"
-                style={{
-                  filter: isMobile ? 'brightness(1.1) contrast(1.05)' : 'brightness(1.2) contrast(1.1) saturate(1.1)'
-                }}
-                quality={isMobile ? 60 : 80}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-              />
-            </video>
-          </div>
-        )}
+        {/* Background image (video disabled) */}
+        <Image
+          src="/images/banner.webp"
+          alt="Luxury Living in Dubai"
+          fill
+          className="object-cover z-0"
+          style={{
+            filter: isMobile ? 'brightness(1.1) contrast(1.05)' : 'brightness(1.2) contrast(1.1) saturate(1.1)'
+          }}
+          quality={isMobile ? 60 : 80}
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+        />
       </div>
 
       {/* Enhanced Gradient Overlay */}
@@ -135,10 +105,10 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-center mb-8 md:mb-12"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 font-serif leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 md:mb-6 font-serif leading-tight">
             Find Luxury Properties <span className="text-[#c8b180] font-serif">in Dubai</span>
           </h1>
-          <h2 className="text-lg md:text-xl lg:text-2xl font-light text-white font-serif">
+          <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-light text-white font-serif">
             Explore our curated selection of exquisite properties and investment opportunities, tailored to exceed your expectations.
           </h2>
         </motion.div>
@@ -148,12 +118,12 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="bg-white rounded-lg shadow-2xl p-4 md:p-6"
+          className="bg-white rounded-lg shadow-2xl p-3 sm:p-4 md:p-6"
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-3 sm:gap-4">
             {/* Transaction Type */}
             <Select value={transactionType} onValueChange={setTransactionType}>
-              <SelectTrigger className="w-full bg-white border-gray-300">
+              <SelectTrigger className="w-full bg-white border-gray-300 h-10 text-sm md:h-12 md:text-base">
                 <SelectValue placeholder="Buy" />
               </SelectTrigger>
               <SelectContent>
@@ -168,12 +138,12 @@ export default function HeroSection() {
               placeholder="Location"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
-              className="w-full bg-white border-gray-300"
+              className="w-full bg-white border-gray-300 h-10 text-sm md:h-12 md:text-base"
             />
 
             {/* Property Type */}
             <Select value={propertyType} onValueChange={setPropertyType}>
-              <SelectTrigger className="w-full bg-white border-gray-300">
+              <SelectTrigger className="w-full bg-white border-gray-300 h-10 text-sm md:h-12 md:text-base">
                 <SelectValue placeholder="Property Type" />
               </SelectTrigger>
               <SelectContent>
@@ -187,7 +157,7 @@ export default function HeroSection() {
 
             {/* Price Range */}
             <Select value={priceRange} onValueChange={setPriceRange}>
-              <SelectTrigger className="w-full bg-white border-gray-300">
+              <SelectTrigger className="w-full bg-white border-gray-300 h-10 text-sm md:h-12 md:text-base">
                 <SelectValue placeholder="Price Range" />
               </SelectTrigger>
               <SelectContent>
@@ -201,7 +171,7 @@ export default function HeroSection() {
 
             {/* Bedrooms */}
             <Select value={bedrooms} onValueChange={setBedrooms}>
-              <SelectTrigger className="w-full bg-white border-gray-300">
+              <SelectTrigger className="w-full bg-white border-gray-300 h-10 text-sm md:h-12 md:text-base">
                 <SelectValue placeholder="Bedrooms" />
               </SelectTrigger>
               <SelectContent>
@@ -215,10 +185,12 @@ export default function HeroSection() {
             </Select>
 
             {/* Search Button */}
-            <Button className="bg-[#c8b180] hover:bg-[#b8a070] text-white w-full flex items-center justify-center gap-2">
-              <Search className="w-5 h-5" />
-              <span className="font-semibold">Search</span>
-            </Button>
+            <Link href={`/buy`}>
+              <Button className="bg-[#c8b180] hover:bg-[#b8a070] text-white w-full h-10 md:h-12 text-sm md:text-base flex items-center justify-center gap-2">
+                <Search className="w-5 h-5" />
+                <span className="font-semibold">Search</span>
+              </Button>
+            </Link>
           </div>
         </motion.div>
       </div>

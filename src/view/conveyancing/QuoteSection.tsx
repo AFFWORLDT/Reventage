@@ -51,9 +51,11 @@ export default function QuoteSection() {
               </div>
             </div>
 
-            <button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
-              Find out more →
-            </button>
+            <a href="/conveyancing" className="inline-block">
+              <button className="bg-[#c8b180] hover:bg-[#a68b5b] text-white px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200">
+                Find out more →
+              </button>
+            </a>
           </div>
         </div>
       </div>
