@@ -23,7 +23,7 @@ import { Loader, X, Search } from "lucide-react";
 import { useEffect, useState, useCallback, useMemo } from "react";
 import { api } from "@/src/lib/axios";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 // Constants
 const COMPLETION_STATUS_OPTIONS = [
@@ -86,6 +86,8 @@ const HANDOVER_YEAR_OPTIONS = [
 
 function OffPlansPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const [selectedCommunity, setSelectedCommunity] = useState("");
   const [property, setProperty] = useState([]);
   const [loading, setLoading] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
@@ -100,6 +102,7 @@ function OffPlansPage() {
   const [filters, setFilters] = useState({
     type: "off_plan",
     title: "",
+    community: "",
     property_type: "any",
     min_price: "any",
     max_price: "any",
@@ -109,6 +112,20 @@ function OffPlansPage() {
     bathrooms: "any",
     handover_year: "any",
   });
+
+  // Initialize filters from query params (e.g., community from communities click-through)
+  useEffect(() => {
+    const qCommunity = searchParams?.get("community") || "";
+    const qTitle = searchParams?.get("title") || ""; // backward compatibility
+    const seed = qCommunity || qTitle;
+    if (seed) {
+      setFilters((prev) => ({ ...prev, title: seed, community: seed }));
+      setSelectedCommunity(qCommunity);
+    } else {
+      setSelectedCommunity("");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
 
   const fetchproperty = useCallback(async (page = 1) => {
     setLoading(true);
@@ -134,15 +151,37 @@ function OffPlansPage() {
       console.log("Total properties:", res?.total);
       console.log("Current page:", page);
       console.log("Properties received:", res?.projects?.length);
-      setProperty(res?.projects || []);
-      setTotalPages(Math.ceil((res?.total || 0) / 24));
-      setTotalProperties(res?.total || 0);
+      let projects = res?.projects || [];
+      const normalize = (s: string) => (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+      // Strict community filter if provided via URL
+      if (selectedCommunity) {
+        const target = normalize(selectedCommunity);
+        projects = projects.filter((p: any) => normalize(p?.location?.community) === target);
+      }
+      // Client-side text search across common fields when title is typed
+      if (filters.title) {
+        const q = normalize(filters.title);
+        projects = projects.filter((p: any) => {
+          const name = normalize(p?.name);
+          const dev = normalize(p?.developer?.name);
+          const city = normalize(p?.location?.city);
+          const comm = normalize(p?.location?.community);
+          const subc = normalize(p?.location?.sub_community);
+          return (
+            name.includes(q) || dev.includes(q) || city.includes(q) || comm.includes(q) || subc.includes(q)
+          );
+        });
+      }
+      setProperty(projects);
+      const effectiveTotal = projects.length;
+      setTotalPages(Math.max(1, Math.ceil(effectiveTotal / 24)));
+      setTotalProperties(effectiveTotal);
     } catch (error) {
       console.error("Error fetching properties:", error);
     } finally {
       setLoading(false);
     }
-  }, [filters]);
+  }, [filters, selectedCommunity]);
 
   // Debounced developer search
   const searchDevelopers = useCallback((searchTerm: string) => {
@@ -209,6 +248,18 @@ function OffPlansPage() {
   useEffect(() => {
     setCurrentPage(1);
   }, [filters]);
+
+  // Ensure results refresh immediately when filters (like community/title) change
+  useEffect(() => {
+    fetchproperty(1);
+  }, [filters, fetchproperty]);
+
+  // When community comes from URL, fetch immediately once it's set
+  useEffect(() => {
+    if (selectedCommunity) {
+      fetchproperty(1);
+    }
+  }, [selectedCommunity, fetchproperty]);
 
   useEffect(() => {
     searchDevelopers(developerSearch);
@@ -708,14 +759,36 @@ function OffPlansPage() {
             <Loader className="animate-spin h-10 w-10 text-primary" />
           </div>
         )}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 container mx-auto py-6">
-          {property?.map((property, i) => (
-            <OffPlanCard data={property} key={i} />
-          ))}
-        </div>
+        {(() => {
+          const normalize = (s: string) => (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+          const target = normalize(selectedCommunity);
+          let displayed = selectedCommunity
+            ? property.filter((p: any) => normalize(p?.location?.community) === target)
+            : property;
+          if (filters.title) {
+            const q = normalize(filters.title);
+            displayed = displayed.filter((p: any) => {
+              const name = normalize(p?.name);
+              const dev = normalize(p?.developer?.name);
+              const city = normalize(p?.location?.city);
+              const comm = normalize(p?.location?.community);
+              const subc = normalize(p?.location?.sub_community);
+              return (
+                name.includes(q) || dev.includes(q) || city.includes(q) || comm.includes(q) || subc.includes(q)
+              );
+            });
+          }
+          return (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 container mx-auto py-6">
+              {displayed?.map((p: any, i: number) => (
+                <OffPlanCard data={p} key={i} />
+              ))}
+            </div>
+          );
+        })()}
 
         {/* Pagination */}
-        {!loading && property.length > 0 && (
+        {!loading && property.length > 0 && !selectedCommunity && (
           <div className="mt-12 mb-8">
             <Pagination
               currentPage={currentPage}

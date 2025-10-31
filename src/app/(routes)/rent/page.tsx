@@ -23,7 +23,7 @@ import { Loader, Filter, X, Search } from "lucide-react";
 import PropertyCardSkeleton from "@/src/components/common/property-card-skeleton";
 import React, { useCallback, useMemo } from "react";
 import { api } from "@/src/lib/axios";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 // Constants
@@ -56,6 +56,7 @@ const HANDOVER_YEAR_OPTIONS = [
 
 function Rent() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const [property, setProperty] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
   const [showFilters, setShowFilters] = React.useState(false);
@@ -170,9 +171,26 @@ function Rent() {
     fetchproperty(currentPage);
   }, [fetchproperty, currentPage]);
 
+  // Seed search from query (?title= or ?community=) and auto-fetch
+  React.useEffect(() => {
+    const qCommunity = searchParams?.get("community") || "";
+    const qTitle = searchParams?.get("title") || "";
+    const seed = qCommunity || qTitle;
+    if (seed) {
+      setFilters((prev: any) => ({ ...prev, title: seed }));
+      fetchproperty(1);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams]);
+
   React.useEffect(() => {
     setCurrentPage(1);
   }, [filters]);
+
+  // Ensure results refresh even if page already 1
+  React.useEffect(() => {
+    fetchproperty(1);
+  }, [filters, fetchproperty]);
 
   React.useEffect(() => {
     searchDevelopers(developerSearch);

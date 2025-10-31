@@ -153,6 +153,10 @@
   span {
     @apply font-sans;
   }
+  /* Ensure all buttons and button-like elements show pointer */
+  button, [type="button"], [type="submit"], [role="button"], .btn, .Button, .shadcn-button {
+    cursor: pointer;
+  }
   
   /* Ensure consistent serif usage for main headings */
   .font-serif {

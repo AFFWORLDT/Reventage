@@ -30,7 +30,7 @@ export default function CommunitiesCard({ data }: { data: CommunityData }) {
     <Card
       className="relative w-full h-[420px] rounded-3xl overflow-hidden shadow-2xl group border border-white/10 cursor-pointer bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-500 hover:shadow-3xl hover:-translate-y-2"
       onClick={() =>
-        router.push(`/communities/details/${encodeURIComponent(data?.name)}`)
+        router.push(`/offPlans?community=${encodeURIComponent(data?.name || "")}`)
       }
     >
       <CardContent className="p-0 h-full relative">
@@ -64,7 +64,7 @@ export default function CommunitiesCard({ data }: { data: CommunityData }) {
 
           {/* Explore Link */}
           <Link
-            href={`/communities/details/${encodeURIComponent(data?.name)}`}
+            href={`/offPlans?community=${encodeURIComponent(data?.name || "")}`}
             className={cn(
               "relative pb-1 transition-all duration-300 text-[#c8b180] uppercase text-sm font-light tracking-wider group-hover:text-[#a68b5b]",
               "after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0",
