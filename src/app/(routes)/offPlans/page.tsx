@@ -20,7 +20,7 @@ import OffPlanCard from "@/src/view/offPlans/offPlanCard";
 import Pagination from "@/src/components/common/Pagination";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { Loader, X, Search } from "lucide-react";
-import { useEffect, useState, useCallback, useMemo } from "react";
+import { useEffect, useState, useCallback, useMemo, Suspense } from "react";
 import { api } from "@/src/lib/axios";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -84,7 +84,7 @@ const HANDOVER_YEAR_OPTIONS = [
   "2035",
 ];
 
-function OffPlansPage() {
+function OffPlansPageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [selectedCommunity, setSelectedCommunity] = useState("");
@@ -802,6 +802,22 @@ function OffPlansPage() {
         )}
       </div>
     </div>
+  );
+}
+
+function OffPlansPage() {
+  return (
+    <Suspense fallback={
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 container mx-auto py-6">
+        {Array.from({ length: 6 }).map((_, i) => (
+          <div key={i} className="animate-pulse">
+            <div className="bg-gray-200 h-64 rounded-lg"></div>
+          </div>
+        ))}
+      </div>
+    }>
+      <OffPlansPageContent />
+    </Suspense>
   );
 }
 
