@@ -310,15 +310,23 @@ export default function Header() {
         data-mobile-overlay
         className={`fixed top-0 bottom-0 right-0 w-full md:w-1/3 bg-white text-gray-900 z-[9999] transform transition-transform duration-300 ease-in-out shadow-2xl ${
           isOverlayOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        } flex flex-col h-screen`}
         style={{ 
           backgroundColor: 'white', 
           opacity: 1,
           backgroundImage: 'none'
         }}
       >
-        <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200 bg-gradient-to-r from-[#c8b180] to-[#a68b5b] text-white">
-          <h2 className="text-xl font-bold font-serif">Menu</h2>
+        <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-200 bg-gradient-to-r from-[#c8b180] to-[#a68b5b] text-white sticky top-0 z-10">
+          <Link href="/" onClick={() => setIsOverlayOpen(false)} className="flex items-center">
+            <Image
+              src="/images/new_logo.png"
+              alt="Revantage Logo"
+              width={110}
+              height={34}
+              className="object-contain"
+            />
+          </Link>
           <button
             onClick={() => setIsOverlayOpen(false)}
             className="text-white hover:text-gray-200 transition-colors duration-200 p-2 rounded-full hover:bg-white/10"
@@ -326,7 +334,7 @@ export default function Header() {
             <X className="h-6 w-6" />
           </button>
         </div>
-
+        <div className="flex-1 overflow-y-auto">
         <nav className="flex flex-col p-4 sm:p-6 space-y-2 bg-white">
           {navLinks.map((link, i) => {
             if (link.href === "/service") {
@@ -411,7 +419,7 @@ export default function Header() {
               </Button>
             </Link>
           </div>
-
+        </div>
         </div>
       </div>
     </header>

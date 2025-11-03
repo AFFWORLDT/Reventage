@@ -32,6 +32,16 @@ function Solutions() {
     },
   ];
 
+  const getHref = (title: string) => {
+    if (title === "Expert Guidance" || title === "Tailored Solutions") {
+      return "https://wa.me/97142345644";
+    }
+    if (title === "Exceptional Service" || title === "Trusted Expertise") {
+      return "/offPlans";
+    }
+    return undefined;
+  };
+
   return (
     <section className="py-8 sm:py-12 md:py-24 bg-gradient-to-br from-[#F8F6F0] via-white to-[#F2EEE8] relative overflow-hidden">
       {/* Luxury Background Elements */}
@@ -54,9 +64,14 @@ function Solutions() {
 
           {/* Ultra Luxury Solutions Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
-            {solutions.map((solution, index) => (
-              <div
+            {solutions.map((solution, index) => {
+              const href = getHref(solution.title);
+              const Wrapper: any = href ? 'a' : 'div';
+              const wrapperProps: any = href ? { href, target: href.startsWith('http') ? '_blank' : undefined, rel: href.startsWith('http') ? 'noopener noreferrer' : undefined } : {};
+              return (
+              <Wrapper
                 key={index}
+                {...wrapperProps}
                 className="group relative bg-white/80 backdrop-blur-sm border border-[#c8b180]/20 rounded-2xl p-4 sm:p-6 md:p-8 hover:bg-white/95 hover:border-[#c8b180]/40 hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-1 md:hover:-translate-y-2"
               >
                 {/* Luxury Icon Container */}
@@ -85,8 +100,9 @@ function Solutions() {
 
                 {/* Luxury Border Effect */}
                 <div className="absolute inset-0 rounded-2xl border border-transparent bg-gradient-to-r from-[#c8b180]/20 via-transparent to-[#a68b5b]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-            ))}
+              </Wrapper>
+              );
+            })}
           </div>
         </div>
       </div>

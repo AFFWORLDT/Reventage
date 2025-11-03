@@ -51,7 +51,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">WhatsApp</div>
-                  <a href="#" className="text-primary hover:text-primary/80 transition-colors duration-200">
+                  <a href="https://wa.me/97142345644" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors duration-200">
                     Click to WhatsApp
                   </a>
                 </div>
@@ -179,11 +179,11 @@ export default function ContactForm() {
 
               <p className="text-sm text-gray-500 text-center">
                 By clicking Submit, you agree to our{' '}
-                <a href="#" className="text-primary underline hover:text-primary/80">
+                <a href="/terms-conditions" className="text-primary underline hover:text-primary/80">
                   Terms & Conditions
                 </a>{' '}
                 and{' '}
-                <a href="#" className="text-primary underline hover:text-primary/80">
+                <a href="/privacy-policy" className="text-primary underline hover:text-primary/80">
                   Privacy Policy
                 </a>
                 .
