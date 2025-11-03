@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4 font-serif">1. Introduction</h2>
               <p className="text-gray-700 mb-4">
-                Revantage ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <a href="https://revantage.com" className="text-blue-600 hover:underline">revantage.com</a> or use our services.
+                Revantage ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <a href="https://revantagedxb.com/" className="text-blue-600 hover:underline">revantagedxb.com</a> or use our services.
               </p>
               <p className="text-gray-700 mb-4">
                 This policy applies to all users of our website and services, including visitors, registered users, and property owners.

@@ -123,6 +123,11 @@ export default function DetailPage({ id }: any) {
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-light mb-2 sm:mb-4 leading-tight tracking-wide font-serif">
             {property?.title}
           </h1>
+          {property?.price && (
+            <p className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 tracking-wide text-primary">
+              AED {property.price.toLocaleString()}
+            </p>
+          )}
           <p className="text-base sm:text-lg font-light mb-8 sm:mb-12 tracking-wider uppercase text-primary">
             {property?.location?.city} {property?.location?.community} {property?.location?.sub_community}
           </p>
@@ -206,6 +211,12 @@ export default function DetailPage({ id }: any) {
                 Details
               </h3>
               <div className="text-sm font-light text-gray-700 space-y-1">
+                {property?.price && (
+                  <p>
+                    <strong className="font-bold">Price:</strong>{" "}
+                    AED {property.price.toLocaleString()}
+                  </p>
+                )}
                 <p>
                   {" "}
                   <strong className="font-bold">City</strong>:{" "}
@@ -213,7 +224,7 @@ export default function DetailPage({ id }: any) {
                 </p>
                 <p>
                   {" "}
-                  <strong className="font-bold">Apartment Type:</strong>{" "}
+                  <strong className="font-bold">Property Type:</strong>{" "}
                   {property?.property_type}
                 </p>{" "}
                 <p>
